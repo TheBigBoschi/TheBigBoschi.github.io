@@ -1,4 +1,4 @@
-baseurl = "TheBigBoschi.github.io"
+baseurl = "https:TheBigBoschi.github.io"
 metaDataFormat = "yaml"
 languageCode = "en-us"
 title = "Andrea Cerfoglia's blog"
