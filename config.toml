@@ -1,5 +1,6 @@
 baseurl = "TheBigBoschi.github.io"
 metaDataFormat = "yaml"
+languageCode = "en-us"
 title = "Andrea Cerfoglia's blog"
 theme = ["blist"]
 
