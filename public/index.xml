@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Andrea Cerfoglia&#39;s blog</title>
-    <link>TheBigBoschi.github.io/</link>
+    <link>https:TheBigBoschi.github.io/</link>
     <description>Recent content on Andrea Cerfoglia&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 18 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="TheBigBoschi.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 18 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https:TheBigBoschi.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Nixie Clock</title>
-      <link>TheBigBoschi.github.io/blog/nixie-clock/</link>
+      <link>https:TheBigBoschi.github.io/blog/nixie-clock/</link>
       <pubDate>Tue, 18 Oct 2022 00:00:00 +0000</pubDate>
       
-      <guid>TheBigBoschi.github.io/blog/nixie-clock/</guid>
+      <guid>https:TheBigBoschi.github.io/blog/nixie-clock/</guid>
       <description>As an electronic enthusisast I have always been fascinated with the concept of timekeeping, it&amp;rsquo;s one of those challenges that humanity has solved. as an example, think about the iconic casio F-91W, it&amp;rsquo;s cheap (around 20€) and has been around since forever, still it can realistically keep +-15 sec/month of accuracy in a normal enviroment. as such the day I found my scrapbin some nixie tubes i obviously started thinking about making a tabletop clock.</description>
     </item>
     
     <item>
       <title>About Me</title>
-      <link>TheBigBoschi.github.io/about/</link>
+      <link>https:TheBigBoschi.github.io/about/</link>
       <pubDate>Sun, 16 Oct 2022 00:00:00 +0000</pubDate>
       
-      <guid>TheBigBoschi.github.io/about/</guid>
+      <guid>https:TheBigBoschi.github.io/about/</guid>
       <description>Hi! im Andrea Cerfoglia, a 22yo currently studying computer engineering at Politecnico Di Milano in Milan, Italy.
 at the time of this writing I&amp;rsquo;m in my (hopefully) last year of study and closer than ever to my bachelor degree.
 I hope to use this blog as a portfolio of my project and ideas as sometimes i create clever things and I would like being able to share them with other thinkers and pheraps even show off too!</description>
@@ -29,37 +29,37 @@ I hope to use this blog as a portfolio of my project and ideas as sometimes i cr
     
     <item>
       <title>Markdown Syntax Guide</title>
-      <link>TheBigBoschi.github.io/blog/markdown-syntax/</link>
+      <link>https:TheBigBoschi.github.io/blog/markdown-syntax/</link>
       <pubDate>Wed, 14 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>TheBigBoschi.github.io/blog/markdown-syntax/</guid>
+      <guid>https:TheBigBoschi.github.io/blog/markdown-syntax/</guid>
       <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Math Typesetting</title>
-      <link>TheBigBoschi.github.io/blog/math-typesetting/</link>
+      <link>https:TheBigBoschi.github.io/blog/math-typesetting/</link>
       <pubDate>Wed, 14 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>TheBigBoschi.github.io/blog/math-typesetting/</guid>
+      <guid>https:TheBigBoschi.github.io/blog/math-typesetting/</guid>
       <description>&lt;p&gt;Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Placeholder Text</title>
-      <link>TheBigBoschi.github.io/blog/placeholder-text/</link>
+      <link>https:TheBigBoschi.github.io/blog/placeholder-text/</link>
       <pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>TheBigBoschi.github.io/blog/placeholder-text/</guid>
+      <guid>https:TheBigBoschi.github.io/blog/placeholder-text/</guid>
       <description>&lt;p&gt;Lorem est tota propiore conpellat pectoribus de pectora summo.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Rich Content</title>
-      <link>TheBigBoschi.github.io/blog/rich-content/</link>
+      <link>https:TheBigBoschi.github.io/blog/rich-content/</link>
       <pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>TheBigBoschi.github.io/blog/rich-content/</guid>
+      <guid>https:TheBigBoschi.github.io/blog/rich-content/</guid>
       <description>&lt;p&gt;Hugo ships with several &lt;a href=&#34;https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Built-in Shortcodes&lt;/a&gt;
  for rich content, along with a &lt;a href=&#34;https://gohugo.io/about/hugo-and-gdpr/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Privacy Config&lt;/a&gt;
  and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.&lt;/p&gt;
