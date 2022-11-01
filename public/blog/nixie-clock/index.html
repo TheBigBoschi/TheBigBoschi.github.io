@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage"><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="/logo.png">
+
+  <title>
+  Nixie Clock - Andrea Cerfoglia&#39;s blog
+  </title>
+  <meta name="description" content="a nixie based clock" /><meta name="generator" content="Hugo 0.101.0" /><link
+    rel="stylesheet"
+    href="/TheBigBoschi.github.io/css/styles.min.17a412bdd764f57e948bbcacf1b202a2dad24dc7ac9b531f9f615251f37876c2.css"
+    integrity="sha256-F6QSvddk9X6Ui7ys8bICotrSTcesm1Mfn2FSUfN4dsI="
+  />
+  
+  
+
+  <meta property="og:title" content="Nixie Clock" />
+<meta property="og:description" content="a nixie based clock" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="TheBigBoschi.github.io/blog/nixie-clock/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2022-10-18T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-10-18T00:00:00+00:00" />
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Nixie Clock"/>
+<meta name="twitter:description" content="a nixie based clock"/>
+
+  <meta itemprop="name" content="Nixie Clock">
+<meta itemprop="description" content="a nixie based clock"><meta itemprop="datePublished" content="2022-10-18T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2022-10-18T00:00:00+00:00" />
+<meta itemprop="wordCount" content="1065">
+<meta itemprop="keywords" content="" />
+
+  
+</head>
+<body class="dark:bg-gray-800 dark:text-white relative flex flex-col min-h-screen"><header class="container flex justify-between md:justify-between gap-4 flex-wrap p-6 mx-auto relative">
+  <a href="TheBigBoschi.github.io/" class="capitalize font-extrabold text-2xl">
+    
+    <img src="/logo.png" alt="Andrea Cerfoglia&#39;s blog" class="h-8 max-w-full" />
+    
+  </a>
+  <button class="mobile-menu-button md:hidden">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <line x1="4" y1="8" x2="20" y2="8" />
+      <line x1="4" y1="16" x2="20" y2="16" />
+    </svg>
+  </button>
+  <ul class="mobile-menu absolute z-10 px-6 pb-6 md:p-0 top-full left-0 w-full md:w-auto md:relative hidden md:flex flex-col md:flex-row items-end md:items-center gap-4 lg:gap-6 bg-white dark:bg-gray-800">
+
+    
+    <li><a href="/TheBigBoschi.github.io/about">About</a></li>
+    
+    <li><a href="/TheBigBoschi.github.io/blog">Blog</a></li>
+    
+
+    
+
+    
+    <li class="grid place-items-center">
+      <span class="open-search inline-block cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <circle cx="10" cy="10" r="7" />
+          <line x1="21" y1="21" x2="15" y2="15" />
+        </svg>
+      </span>
+    </li>
+    
+
+    
+    <li class="grid place-items-center">
+      <span class="toggle-dark-mode inline-block cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <circle cx="12" cy="12" r="3" />
+          <line x1="12" y1="5" x2="12" y2="5.01" />
+          <line x1="17" y1="7" x2="17" y2="7.01" />
+          <line x1="19" y1="12" x2="19" y2="12.01" />
+          <line x1="17" y1="17" x2="17" y2="17.01" />
+          <line x1="12" y1="19" x2="12" y2="19.01" />
+          <line x1="7" y1="17" x2="7" y2="17.01" />
+          <line x1="5" y1="12" x2="5" y2="12.01" />
+          <line x1="7" y1="7" x2="7" y2="7.01" />
+        </svg>
+      </span>
+    </li>
+    
+  </ul>
+</header>
+<main class="flex-1">
+  
+  
+
+  
+  <div class="relative max-w-5xl mx-auto px-4">
+    <img src="/featured-placeholder.jpg" class="rounded-lg shadow-sm w-full object-contain" />
+    
+    <div class="absolute top-4 right-8 rounded shadow bg-white text-gray-900 dark:bg-gray-900 dark:text-white px-2 py-0.5">
+      
+  
+    October 18, 2022
+  
+
+
+    </div>
+    
+  </div>
+  
+
+  <article class="prose lg:prose-lg mx-auto my-8 dark:prose-dark px-4">
+
+    <h1 class="text-2xl font-bold mb-2">Nixie Clock</h1>
+    
+    <h5 class="text-sm flex items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" class="mr-1" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <rect x="4" y="5" width="16" height="16" rx="2" />
+        <line x1="16" y1="3" x2="16" y2="7" />
+        <line x1="8" y1="3" x2="8" y2="7" />
+        <line x1="4" y1="11" x2="20" y2="11" />
+        <rect x="8" y="15" width="2" height="2" />
+      </svg>
+      Posted on 
+  
+    October 18, 2022
+  
+
+
+      
+        &nbsp;&bull;&nbsp;
+      
+      <svg xmlns="http://www.w3.org/2000/svg" class="mr-1" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <circle cx="12" cy="12" r="9" />
+        <polyline points="12 7 12 12 15 15" />
+      </svg>
+      5&nbsp;minutes
+      &nbsp;&bull;
+      <svg xmlns="http://www.w3.org/2000/svg" class="mx-1" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+        <path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+        <line x1="3" y1="6" x2="3" y2="19" />
+        <line x1="12" y1="6" x2="12" y2="19" />
+        <line x1="21" y1="6" x2="21" y2="19" />
+      </svg>
+      1065&nbsp;words
+      
+    </h5>
+    
+
+    <img src="casio.jpg" width="30%"  style="float:right; border-radius: 20px; padding: 1% 2%;"/>
+<p>As an electronic enthusisast I have always been fascinated with the concept of timekeeping, it&rsquo;s one of those challenges that humanity has solved. as an example, think about the iconic casio F-91W, it&rsquo;s cheap (around 20€) and has been around since forever, still it can realistically keep +-15 sec/month of accuracy in a normal enviroment.
+as such the day I found my scrapbin some nixie tubes i obviously started thinking about making a tabletop clock.</p>
+</div>
+<br>
+<h2 id="nixie">Nixie</h2>
+<img src="nixie.jpeg" title="A cute kitten" width="40%"  style="float:left; border-radius: 20px; padding: 1% 2%;"/>
+<p>Nixies are a relic of the sixties, and are thin number-shaped wires stacked one on top of the other sealed in a glass bulb filled with a low pressure noble gas (and sometimes some mercury to increase theyr lifespan). you have a anode and 10 cathodes, one for each displayable number. you apply around 180v with a  impedance of around 20Kohm between the anode and the cathode and a digit lights up. it&rsquo;s basically magic! (little note: nixies DONT work by the same principle as a lightbulb filament. they works by <a href="https://en.wikipedia.org/wiki/Glow_discharge" target="_blank" rel="noopener">glow discharge</a>
+ effect)</p>
+<h2 id="hv-power-supply">HV power supply</h2>
+<p>since nixies operate at such high voltage i cant simply obtain it from a wall wart power supply, it would be impractical and very dangerous for the end user.
+instead i opted for a standard 12v barrel jack wall wart power supply. its cheap, easily available and it doesnt raise any concern about safety.</p>
+<p><a href="/blog/nixie-clock/HV_PSU.png"><img src="HV_PSU.png" width="90%"  style="float:center; border-radius: 20px;padding: 1% 2%;"/></a></p>
+<p>courtesy of Mr. Moorrees from <a href="https://threeneurons.wordpress.com/nixie-power-supply/" target="_blank" rel="noopener">threeneurons</a>
+</p>
+<p>this is the PSU that i chose to build, mainly because its simple, reliable and the current sense resistor (R2) allows me to chose easily the peak current drawn and if needed to change it to suit the max saturation current of the inductor.
+the series of 100K resistor is to both reduce the items on the BOM and to allow 200v across them since a single 0805 resistor is rated at 150V peak.<br>
+special care is given to the potentiometer, located on the low side of the voltage divider. since this is a part potentially subjected to mechanical wear, in this configuration a open-circuit fail would just drop the output voltage to a safe one (probably 12v or even just 2.5V), if instead the pot would have been on the high side in an open-circuit fail the voltage would have increased enough to harm the nixies and the switching transistors.</p>
+<h2 id="anode-resistor-sizing">Anode resistor sizing</h2>
+<p>as stated before you need to add a resistor between the psu and the nixie. how do you choose the right value? the point is that nixies have some hysteresis in theyr turn on/turn off voltage curve. what does it means? basically, to turn on a digit you need a voltage (striking voltage) above 170V, and when the digit its lit the voltage between its anode and its cathode drops to about 133V (holding voltage). as said by its <a href="http://www.tube-tester.com/sites/nixie/data/in-1/in-1.htm" target="_blank" rel="noopener">datasheet</a>
+ the maximium current that should flow its 2.5mA. to stay safe i choose to limit its current to 2mA. so you calculate the resistor by doing (HV_voltage - Holding_Voltage)/Ifilament (in this case around 18.5 Kohms, rounded to 20).</p>
+<h2 id="timekeeping">Timekeeping</h2>
+<h4 id="the-old-way">The &ldquo;old&rdquo; way</h4>
+<p>using discrete IC&rsquo;s is my favourite way, mainly because why not? discrete logic is cool, and even thoug it add some complexity the fact that it hasnt any code running on it means that it cannot glitch or do stuff that it souldnt do.</p>
+<p>after designing it (up to the logical design) i realized that it wasnt that good of an idea, mainly because i wanted it to hold the time even when the power was off for extended periods of time, and thanks to the very precise TCXO (Temperature Compensated Crystal Oscillator) it would have been very power hungry, so it wouldnt last very long on backup power.</p>
+<h4 id="the-modern-way">The &ldquo;Modern&rdquo; way</h4>
+<p>it simply consist in using a microcontroller and a RTC (Real Time Clock) module, and while the power is off i just have to keep powered the RTC, and since a normal one has a quiscent current of around 0.25uA even a couple of AAA battery with a capacity of 1Ah can keep the time running for 450 years&hellip; more or less.</p>
+<p>in the end i landed on a <a href="https://www.nxp.com/docs/en/data-sheet/PCF2129.pdf" target="_blank" rel="noopener">PCF2129</a>
+, mainly because it was cheap (around 2$ on LCSC) and has an accuracy of +-3ppm or 95 seconds/year. that, coupled to an <a href="https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/ATtiny1614-16-17-DataSheet-DS40002204A.pdf" target="_blank" rel="noopener">attiny1616</a>
+ and i have all the necessary logic to make a clock.</p>
+<p>since the PCF2129 has a maximium supply voltage of 4.2V (well above the minimium voltage of 1.8V of the attiny) this set the operating voltage of the control logic. i did so using a <a href="http://www.advanced-monolithic.com/pdf/ds1117.pdf" target="_blank" rel="noopener">AMS1117-ADJ</a>
+ LDO voltage regulator, U3 in the schematic. pay attention to the fact that i used the fixed voltage model in the cad, so even though the pin 1 is labeled as GND is in fact the ADJ pin.</p>
+<p>i then added some momentary switches and some connectors to neatly tie together all the unused pins and to grant easy access to some of the others (ie the programming pins and the switches). i also added a connector to connect a light sensitive resistor to the watch to dim it while it was dark around it, but it was noted during some tests that it wasnt a useful feature.</p>
+<p><a href="/blog/nixie-clock/mainBoardSchematic.png"><img src="mainBoardSchematic.png"  style="float:center; border-radius: 20px;"/></a></p>
+<p>the last piece that was missing was a way to drive the cathodes and pull them at ground level when i want to light up a digit. since my little happy attiny1616 has a limited number of I/O and i need around 40 to drive all the digits in the nixies and a few other to turn on other auxiliary lights i opted to use some <a href="https://assets.nexperia.com/documents/data-sheet/74HC_HCT595.pdf" target="_blank" rel="noopener">74HC595</a>
+. this chip is a serial to parallel shift register, basically it needs 3 data lines and an output enable signal to drive a teoretically infinite number of ouptuts. i opted to use 3 shift register for each couple of nixies, this gives me 3*8 output lines, wich are 10*2 cathodes + 2 spares channels.
+to interface each output of the IC with the HV voltages of the cathodes i used a MMBTA44, a 400V transitor, for each cathode.</p>
+<p><a href="/blog/nixie-clock/digitSchematic.png"><img src="digitSchematic.png"  style="float:center; border-radius: 20px;"/></a></p>
+<p>each couple of digits has a circuit like this. the 595 are wonderful in this kind of cases, you just daisy chain them together, spit out some more bits of data and you are good to go, making this kind of stuff modular, easily upgradable and maintainable.</p>
+<h2 id="pdf-schematic">PDF Schematic</h2>
+<p><a href="/blog/nixie-clock/schematic.pdf">Here!</a>
+</p>
+
+  </article><div class="bg-blue-100 dark:bg-gray-900">
+  <div class="container px-6 py-12 mx-auto max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <div>
+      <div class="text-2xl font-bold mb-2">Follow me</div>
+      <p class="opacity-60"></p>
+    </div>
+    <ul class="flex justify-center gap-4">
+      
+      
+      
+      
+      <li>
+        <a
+          href="https://github.com/TheBigBoschi"
+          target="_blank"
+          rel="noopener"
+          aria-label="GitHub"
+          class="p-2 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
+            />
+          </svg>
+        </a>
+      </li>
+      
+      
+      
+      
+      
+      
+      <li>
+        <a
+          href="https://www.instagram.com/boschi1999/"
+          target="_blank"
+          rel="noopener"
+          aria-label="Instagram"
+          class="p-2 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-brand-instagram"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" />
+            <circle cx="12" cy="12" r="9" />
+            <path d="M10 9l5 3l-5 3z" />
+          </svg>
+        </a>
+      </li>
+      
+      
+    </ul>
+  </div>
+</div>
+    </main><footer class="container p-6 mx-auto flex justify-between items-center">
+  <span class="text-sm font-light">
+    
+    Copyright © 2022 - Andrea Cerfoglia · All rights reserved
+    
+  </span>
+  <span onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="p-1 cursor-pointer">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5"
+      stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M18 15l-6 -6l-6 6h12" />
+    </svg>
+  </span>
+</footer>
+
+<div class="search-ui absolute top-0 left-0 w-full h-full bg-white dark:bg-gray-800 hidden">
+  <div class="container max-w-3xl mx-auto p-12">
+    <div class="relative">
+      <div class="my-4 text-center text-2xl font-bold">Search</div>
+
+      <span class="p-2 absolute right-0 top-0 cursor-pointer close-search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </span>
+    </div>
+
+    <input type="search" class="py-2 px-3 w-full dark:text-black border dark:border-transparent"
+      placeholder="Enter search query" />
+
+    <div class="search-results text-lg font-medium my-4 hidden">Results</div>
+    <ul class="search-list my-2">
+
+    </ul>
+
+    <div class="no-results text-center my-8 hidden">
+      <div class="text-xl font-semibold mb-2">No results found</div>
+      <p class="font-light text-sm">Try adjusting your search query</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<script src="/TheBigBoschi.github.io/js/scripts.min.js"></script>
+
+
+
+
+
+
+<script>
+  
+  const darkmode = document.querySelector('.toggle-dark-mode');
+  function toggleDarkMode() {
+    if (document.documentElement.classList.contains('dark')) {
+      document.documentElement.classList.remove('dark')
+      localStorage.setItem('darkmode', 'light')
+    } else {
+      document.documentElement.classList.add('dark')
+      localStorage.setItem('darkmode', 'dark')
+    }
+  }
+  if (darkmode) {
+    darkmode.addEventListener('click', toggleDarkMode);
+  }
+
+  const darkStorage = localStorage.getItem('darkmode');
+  const isBrowserDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  if (!darkStorage && isBrowserDark) {
+    document.documentElement.classList.add('dark');
+  }
+
+  if (darkStorage && darkStorage === 'dark') {
+    toggleDarkMode();
+  }
+</script>
+
+
+<script>
+  const mobileMenuButton = document.querySelector('.mobile-menu-button')
+  const mobileMenu = document.querySelector('.mobile-menu')
+  function toggleMenu() {
+    mobileMenu.classList.toggle('hidden');
+    mobileMenu.classList.toggle('flex');
+  }
+  if(mobileMenu && mobileMenuButton){
+    mobileMenuButton.addEventListener('click', toggleMenu)
+  }
+</script>
+</body>
+</html>
