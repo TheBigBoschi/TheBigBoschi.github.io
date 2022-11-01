@@ -1,26 +1,21 @@
 ---
-author: Katheryn Fox
+author: Andrea Cerfoglia
 title: About Me
-date: 2021-07-15
+date: 2022-10-16
 description:
 keywords: ["about-us", "about-hugo", "contact"]
 type: about
 ---
 
-Written in Go, Hugo is an open source static site generator available under the [Apache Licence 2.0.](https://github.com/gohugoio/hugo/blob/master/LICENSE) Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.
+Hi! im Andrea Cerfoglia, a 22yo currently studying computer engineering at [Politecnico Di Milano](https://www.polimi.it/) in Milan, Italy.
 
-Hugo makes use of a variety of open source projects including:
+at the time of this writing I'm in my (hopefully) last year of study and closer than ever to my bachelor degree. 
 
-- https://github.com/yuin/goldmark
-- https://github.com/alecthomas/chroma
-- https://github.com/muesli/smartcrop
-- https://github.com/spf13/cobra
-- https://github.com/spf13/viper
+I hope to use this blog as a portfolio of my project and ideas as sometimes i create clever things and I would  like being able to share them with other thinkers and pheraps even show off too!
 
-Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.
+in this blog I'll mainly talk about my various passions spacing from electronics to woodworking, touching a bit of this and a bit of that (do you know that I restored my very own vespa?)
 
-Hugo is for people who want to hand code their own website without worrying about setting up complicated runtimes, dependencies and databases.
+follow me through my jurney!
 
-Websites built with Hugo are extremely fast, secure and can be deployed anywhere including, AWS, GitHub Pages, Heroku, Netlify and any other hosting provider.
 
-Learn more and contribute on [GitHub](https://github.com/gohugoio).
+
