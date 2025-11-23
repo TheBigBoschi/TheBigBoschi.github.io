@@ -1,0 +1,26 @@
+disabled = false
+languageCode = "en"
+languageName = "English"
+weight = 1
+title = "Andrea's blog"
+
+[params]
+displayName = "EN"
+isoCode = "en"
+rtl = false
+dateFormat = "2 January 2006"
+logo = "Blogo nero.png"
+secondaryLogo = "Blogo nero.png"
+description = "A blog about electronics and programming"
+
+[[params.author.links]]
+github = "https://github.com/TheBigBoschi"
+
+[[params.author.links]]
+linkedin = "https://www.linkedin.com/in/andrea-cerfoglia-867a94166/"
+
+["params.author"]
+name = "Andrea Cerfoglia"
+image = "autor-pic.jpg"
+headline = "Computer engineer who likes to thinker with electronics"
+bio = "I am a computer engineer with a degree from Politecnico di Milano (Class of 2024). My interests span across embedded systems, electronics, and anything driven by computation or the movement of electrons. I enjoy exploring technology at every level, from low-level hardware behavior to high-level system design."
