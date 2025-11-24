@@ -7,11 +7,5 @@ pageRef = "projects"
 identifier = "0anr0jy3GA"
 weight = 9_999
 
-[[main]]
-name = "About me"
-pageRef = "about"
-identifier = "LjFllhg7pw"
-weight = 9_999
-
 [[footer]]
 none = "none"
