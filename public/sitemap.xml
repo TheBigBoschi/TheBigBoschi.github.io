@@ -3,20 +3,20 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>http://localhost:43259/</loc>
-    <lastmod>2025-11-23T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2022-10-18T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:43259/projects/1763930923656-ciaoo/</loc>
-    <lastmod>2025-11-23T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/projects/1763930923656-nixie-clock/</loc>
+    <lastmod>2022-10-18T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:43259/projects/</loc>
-    <lastmod>2025-11-23T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/projects/</loc>
+    <lastmod>2022-10-18T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
