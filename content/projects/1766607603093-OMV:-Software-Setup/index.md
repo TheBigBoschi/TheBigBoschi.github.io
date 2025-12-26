@@ -134,4 +134,4 @@ I suspected the eMMC might be corrupted, and the test confirmed it.
 
 Before migrating the system, I plan to copy fstab and key configuration files to preserve disk mounts and Docker Compose paths. Since all user data is stored on HDDs, this approach allows me to redeploy containers without modifying paths, ensuring that the system comes back online without data loss.
 
-I must say, I truly appreciate the containerization concept—it makes this entire process far more manageable and resilient.
+I must say, I truly appreciate the containerization concept. It makes this entire process far more manageable and resilient.

@@ -68,7 +68,7 @@ This step may take some time, depending on network speed and the number of pendi
 SSH Remot Shell
 --------
 
-From this point on, I strongly recommend working on the machine using a  session. This approach is simply more convenient, as it allows you to keep a browser open alongside the terminal for easy copy and paste.
+From this point on, I strongly recommend working on the machine using a remote SSH session. This approach is simply more convenient, as it allows you to keep a browser open alongside the terminal for easy copy and paste.
 
 The first step is to determine the IP address of the SBC. One option is to check the DHCP section of your router. Alternatively, if a display and keyboard are still connected to the board, you can run:
 ```bash
