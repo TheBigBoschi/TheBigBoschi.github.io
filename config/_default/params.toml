@@ -20,6 +20,9 @@ buymeacoffee = { }
 verification = { }
 rssnext = { }
 advertisement = { }
+smartTOC = true
+smartTOCHideUnfocusedChildren = false
+
 
 [header]
 layout = "basic"
@@ -33,9 +36,9 @@ showScrollToTop = true
 
 [homepage]
 layout = "profile"
-showRecent = false
+showRecent = true
 showRecentItems = 5
-showMoreLink = false
+showMoreLink = ""
 showMoreLinkDest = "/posts/"
 cardView = false
 cardViewScreenWidth = false
@@ -61,7 +64,7 @@ showHeadingAnchors = true
 showPagination = true
 invertPagination = false
 showReadingTime = true
-showTableOfContents = false
+showTableOfContents = true
 showTaxonomies = false
 showCategoryOnly = false
 showAuthorsBadges = ""
@@ -76,7 +79,7 @@ showBreadcrumbs = false
 showSummary = false
 showViews = false
 showLikes = false
-showTableOfContents = false
+showTableOfContents = true
 showCards = false
 orderByWeight = false
 groupByYear = true
@@ -93,7 +96,7 @@ showHero = false
 showBreadcrumbs = false
 showViews = false
 showLikes = false
-showTableOfContents = false
+showTableOfContents = true
 cardView = false
 
 [term]
