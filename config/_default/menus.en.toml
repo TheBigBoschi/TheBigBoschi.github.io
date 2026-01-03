@@ -2,9 +2,15 @@
 none = "none"
 
 [[main]]
-name = "Projects"
-pageRef = "projects"
-identifier = "0anr0jy3GA"
+name = "Linux"
+pageRef = "linux"
+identifier = "QtC2VwhaVQ"
+weight = 9_999
+
+[[main]]
+name = "Electronics"
+pageRef = "electronics"
+identifier = "X1T5Ai8nQV"
 weight = 9_999
 
 [[footer]]

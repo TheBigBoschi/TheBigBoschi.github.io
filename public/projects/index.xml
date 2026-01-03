@@ -6,28 +6,8 @@
     <description>Recent content in Projects on Andrea&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>© 2025 Andrea Cerfoglia</copyright>
-    <lastBuildDate>Wed, 24 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/projects/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>OMV: Software Setup</title>
-      <link>http://localhost:1313/projects/1766607603093-omv-software-setup/</link>
-      <pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/projects/1766607603093-omv-software-setup/</guid>
-      <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/projects/1766607603093-omv-software-setup/featured.png" />
-    </item>
-    
-    <item>
-      <title>OMV: Server setup</title>
-      <link>http://localhost:1313/projects/1766154037272-omv-server-setup/</link>
-      <pubDate>Fri, 19 Dec 2025 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/projects/1766154037272-omv-server-setup/</guid>
-      <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/projects/1766154037272-omv-server-setup/featured.png" />
-    </item>
+    <copyright>© 2026 Andrea Cerfoglia</copyright>
+    <lastBuildDate>Wed, 23 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/projects/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Nixie Clock: Hardware design</title>

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linux on Andrea&#39;s blog</title>
-    <link>http://localhost:1313/tags/linux/</link>
+    <link>http://localhost:40199/tags/linux/</link>
     <description>Recent content in Linux on Andrea&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>© 2025 Andrea Cerfoglia</copyright>
-    <lastBuildDate>Fri, 19 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 2026 Andrea Cerfoglia</copyright>
+    <lastBuildDate>Fri, 19 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:40199/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>OMV: Server setup</title>
-      <link>http://localhost:1313/projects/1766154037272-omv-server-setup/</link>
+      <link>http://localhost:40199/linux/1766154037272-omv-server-setup/</link>
       <pubDate>Fri, 19 Dec 2025 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/projects/1766154037272-omv-server-setup/</guid>
+      <guid>http://localhost:40199/linux/1766154037272-omv-server-setup/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/projects/1766154037272-omv-server-setup/featured.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:40199/linux/1766154037272-omv-server-setup/featured.png" />
     </item>
     
   </channel>
