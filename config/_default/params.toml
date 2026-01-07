@@ -22,7 +22,7 @@ rssnext = { }
 advertisement = { }
 smartTOC = true
 smartTOCHideUnfocusedChildren = false
-
+mainSections = [ "linux", "electronics" ]
 
 [header]
 layout = "basic"
@@ -37,11 +37,11 @@ showScrollToTop = true
 [homepage]
 layout = "profile"
 showRecent = true
-showRecentItems = 5
+showRecentItems = "5"
 showMoreLink = ""
 showMoreLinkDest = "/posts/"
-cardView = false
-cardViewScreenWidth = false
+cardView = true
+cardViewScreenWidth = true
 layoutBackgroundBlur = false
 disableHeroImageFilter = false
 
@@ -76,7 +76,7 @@ showHero = false
 layoutBackgroundBlur = true
 layoutBackgroundHeaderSpace = true
 showBreadcrumbs = false
-showSummary = false
+showSummary = true
 showViews = false
 showLikes = false
 showTableOfContents = true

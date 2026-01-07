@@ -1,11 +1,11 @@
 ---
 title: "Nixie Clock: Hardware design"
-date: 2022-10-18
+date: 2025-10-18
 description: "a nixie based clock"
 thumbnail: "/featured.jpeg"
 tags: ["Nixie", "Clock"]
-series: ["Nixie clock"]
-series_order: 1
+#series: ["Nixie clock"]
+#series_order: 1
 ---
 
 
@@ -39,10 +39,7 @@ Instead, a standard 12 V barrel-jack wall-wart power supply was chosen. It’s i
 
 The schematic below shows the supply unit chosen to power the high-voltage Nixie supply. It was selected for its simplicity, reliability, and the fact that its current-mode PWM control makes it easy to set the peak current drawn by the converter. This limits the maximum load on the 12 V wall-wart supply and also allows the peak current to be adjusted later to match the inductor’s saturation current—useful when working with inductors salvaged from the scrap bin.
 
-{{< figure
-    src="HV_PSU.png"
-    caption="courtesy of Mr. Moorrees from [threeneurons](https://threeneurons.wordpress.com/nixie-power-supply/)"
-    >}}
+{{< figure src="HV_PSU.png" caption="courtesy of Mr. Moorrees from [threeneurons](https://threeneurons.wordpress.com/nixie-power-supply/)" >}}
 
 The series of 100 kΩ resistors serves two purposes: it reduces the number of unique items in the BOM, and it allows the voltage divider to withstand 200 V, since a single 0805 resistor is only rated for about 150 V peak.
 
@@ -109,9 +106,7 @@ For the microcontroller, an [attiny1616](https://ww1.microchip.com/downloads/aem
 
 Compared to what I used before, this chip uses a UPDI programming interface, which requires fewer pins than the usual SPI interface found on most Arduino clones. It should also allow hardware-level debugging, although this feature is not currently implemented in the Arduino APIs.
 
-{{< figure
-    src="mainBoardSchematic.png"
-    >}}
+{{< figure src="mainBoardSchematic.png" >}}
 
 Cathode driver
 --------
@@ -125,9 +120,7 @@ It is important to note that the output enable (OE) pin allows all output pins t
 To interface each shift-register output with the high-voltage cathodes, I used an MMBTA44, a 400 V transistor, for each cathode.
 
 
-{{< figure
-    src="digitSchematic.png"
-    >}}
+{{< figure src="digitSchematic.png">}}
 
 Each pair of digits has a circuit like this. The 74HC595 shift registers are perfect for this kind of application: you can simply daisy-chain them, output more bits of data, and you are ready to go. This makes the design modular, easily upgradable, and maintainable.
 

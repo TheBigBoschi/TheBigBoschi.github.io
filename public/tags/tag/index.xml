@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tag on Andrea&#39;s blog</title>
-    <link>http://localhost:40199/tags/tag/</link>
+    <link>http://localhost:1313/tags/tag/</link>
     <description>Recent content in Tag on Andrea&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Andrea Cerfoglia</copyright>
-    <lastBuildDate>Sat, 03 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:40199/tags/tag/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 03 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/tag/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Cockpit Setup</title>
-      <link>http://localhost:40199/linux/1767436909799-cockpit-setup/</link>
+      <link>http://localhost:1313/linux/1767436909799-cockpit-setup/</link>
       <pubDate>Sat, 03 Jan 2026 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:40199/linux/1767436909799-cockpit-setup/</guid>
+      <guid>http://localhost:1313/linux/1767436909799-cockpit-setup/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:40199/linux/1767436909799-cockpit-setup/featured.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/linux/1767436909799-cockpit-setup/featured.png" />
     </item>
     
     <item>
       <title>OMV: Software Setup</title>
-      <link>http://localhost:40199/linux/1766607603093-omv-software-setup/</link>
+      <link>http://localhost:1313/linux/1766607603093-omv-software-setup/</link>
       <pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:40199/linux/1766607603093-omv-software-setup/</guid>
+      <guid>http://localhost:1313/linux/1766607603093-omv-software-setup/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:40199/linux/1766607603093-omv-software-setup/featured.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/linux/1766607603093-omv-software-setup/featured.png" />
     </item>
     
   </channel>
