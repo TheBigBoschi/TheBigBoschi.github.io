@@ -4,7 +4,19 @@
 
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2026-01-03T00:00:00+00:00</lastmod>
+    <lastmod>2026-01-11T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/electronics/</loc>
+    <lastmod>2026-01-11T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/electronics/nixie-clock-pcb-and-assembly/</loc>
+    <lastmod>2026-01-11T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
@@ -29,12 +41,6 @@
   <url>
     <loc>http://localhost:1313/linux/1766154037272-omv-server-setup/</loc>
     <lastmod>2025-12-19T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/electronics/</loc>
-    <lastmod>2025-11-23T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
