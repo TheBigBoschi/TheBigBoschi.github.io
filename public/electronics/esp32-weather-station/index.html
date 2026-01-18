@@ -15,8 +15,8 @@
 
   
   
-    <title>Nixie Clock: PCB and Assembly &middot; Andrea&#39;s blog</title>
-    <meta name="title" content="Nixie Clock: PCB and Assembly &middot; Andrea&#39;s blog">
+    <title>ESP32 data acquisition board: HW requirements &middot; Andrea&#39;s blog</title>
+    <meta name="title" content="ESP32 data acquisition board: HW requirements &middot; Andrea&#39;s blog">
   
 
   
@@ -26,7 +26,7 @@
   
   
   
-  <link rel="canonical" href="http://localhost:1313/electronics/nixie-clock-pcb-and-assembly/">
+  <link rel="canonical" href="http://localhost:1313/electronics/esp32-weather-station/">
   
 
   
@@ -50,21 +50,19 @@
   
 
   
-  <meta property="og:url" content="http://localhost:1313/electronics/nixie-clock-pcb-and-assembly/">
+  <meta property="og:url" content="http://localhost:1313/electronics/esp32-weather-station/">
   <meta property="og:site_name" content="Andrea&#39;s blog">
-  <meta property="og:title" content="Nixie Clock: PCB and Assembly">
+  <meta property="og:title" content="ESP32 data acquisition board: HW requirements">
   <meta property="og:description" content="A blog about electronics and programming">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="electronics">
-    <meta property="article:published_time" content="2026-01-11T00:00:00+00:00">
-    <meta property="article:modified_time" content="2026-01-11T00:00:00+00:00">
-    <meta property="og:image" content="http://localhost:1313/electronics/nixie-clock-pcb-and-assembly/featured.png">
+    <meta property="article:published_time" content="2026-01-18T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-01-18T00:00:00+00:00">
 
   
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="http://localhost:1313/electronics/nixie-clock-pcb-and-assembly/featured.png">
-  <meta name="twitter:title" content="Nixie Clock: PCB and Assembly">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="ESP32 data acquisition board: HW requirements">
   <meta name="twitter:description" content="A blog about electronics and programming">
 
   
@@ -76,9 +74,15 @@
     
   
     
-  
+      
     
   
+    
+      
+    
+  
+  
+    
   
 
   
@@ -170,21 +174,6 @@
 
 
 
-  
-  
-  <link
-    type="text/css"
-    rel="stylesheet"
-    href="/css/components/carousel.8e65f2c27285218feed8ca2a6e12a80ec2fb4be8f774b7c74d9642f1bc528a3352288a700a64a0e1e3c38a40b74c978b5dbbeb38346202b5f7613d8fc023e3c9.css"
-    integrity="sha512-jmXywnKFIY/u2MoqbhKoDsL7S&#43;j3dLfHTZZC8bxSijNSKIpwCmSg4ePDikC3TJeLXbvrODRiArX3YT2PwCPjyQ==">
-  
-  
-  <script
-    defer
-    type="text/javascript"
-    src="/lib/tw-elements/index.min.5ffccf337b773ee831515cdde152c8039e972dd479f7dffb0532a79de9a6de5926154ae2587f181ed6c06a99aee25667096bcf6495da5aa86e235d98baee5943.js"
-    integrity="sha512-X/zPM3t3PugxUVzd4VLIA56XLdR599/7BTKnnemm3lkmFUriWH8YHtbAapmu4lZnCWvPZJXaWqhuI12Yuu5ZQw=="></script>
-
 
 
 
@@ -221,26 +210,26 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Electronics",
-    "name": "Nixie Clock: PCB and Assembly",
-    "headline": "Nixie Clock: PCB and Assembly",
+    "name": "ESP32 data acquisition board: HW requirements",
+    "headline": "ESP32 data acquisition board: HW requirements",
     
     
     "inLanguage": "en",
-    "url" : "http:\/\/localhost:1313\/electronics\/nixie-clock-pcb-and-assembly\/",
+    "url" : "http:\/\/localhost:1313\/electronics\/esp32-weather-station\/",
     "author" : {
       "@type": "Person",
       "name": "Andrea Cerfoglia"
     },
     "copyrightYear": "2026",
-    "dateCreated": "2026-01-11T00:00:00\u002b00:00",
-    "datePublished": "2026-01-11T00:00:00\u002b00:00",
+    "dateCreated": "2026-01-18T00:00:00\u002b00:00",
+    "datePublished": "2026-01-18T00:00:00\u002b00:00",
     
-    "dateModified": "2026-01-11T00:00:00\u002b00:00",
+    "dateModified": "2026-01-18T00:00:00\u002b00:00",
     
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "661"
+    "wordCount": "1302"
   }]
   </script>
 
@@ -607,7 +596,7 @@
     <header id="single_header" class="mt-5 max-w-prose">
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        Nixie Clock: PCB and Assembly
+        ESP32 data acquisition board: HW requirements
       </h1>
       <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
         
@@ -659,7 +648,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-01-11T00:00:00&#43;00:00">11 January 2026</time><span class="px-2 text-primary-500">&middot;</span><span>661 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span>
+      <time datetime="2026-01-18T00:00:00&#43;00:00">18 January 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1302 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">7 mins</span>
     
 
     
@@ -791,10 +780,11 @@
     class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#pcb">PCB</a></li>
-    <li><a href="#debug">Debug</a></li>
-    <li><a href="#assembly-pictures">Assembly Pictures</a></li>
-    <li><a href="#final-considerations">Final Considerations</a></li>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#hardware">Hardware</a></li>
+    <li><a href="#data-gathering">Data gathering</a></li>
+    <li><a href="#power-requirements">Power Requirements</a></li>
+    <li><a href="#power-source-selection">Power Source Selection</a></li>
   </ul>
 </nav>
   </div>
@@ -808,10 +798,11 @@
     class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#pcb">PCB</a></li>
-    <li><a href="#debug">Debug</a></li>
-    <li><a href="#assembly-pictures">Assembly Pictures</a></li>
-    <li><a href="#final-considerations">Final Considerations</a></li>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#hardware">Hardware</a></li>
+    <li><a href="#data-gathering">Data gathering</a></li>
+    <li><a href="#power-requirements">Power Requirements</a></li>
+    <li><a href="#power-source-selection">Power Source Selection</a></li>
   </ul>
 </nav>
   </div>
@@ -930,303 +921,133 @@
 
         <div class="article-content max-w-prose mb-20">
           
-<h2 class="relative group">PCB
-    <div id="pcb" class="anchor"></div>
+<h2 class="relative group">Overview
+    <div id="overview" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#pcb" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#overview" aria-label="Anchor">#</a>
     </span>
     
 </h2>
-<p>To complete the clock, the only missing part was the PCB. Since the board is not particularly crowded, a 2-layer PCB was more than sufficient to route everything cleanly. The final board looks something like this:</p>
-<p>Front:<br>
-<figure><img
-    class="my-0 rounded-md"
-    loading="lazy"
-    decoding="async"
-    fetchpriority="auto"
-    alt="PCB Front"
-    width="1474"
-    height="693"
-    src="/electronics/nixie-clock-pcb-and-assembly/PCB-Render-front_hu_14291c130371fc42.png"
-    srcset="/electronics/nixie-clock-pcb-and-assembly/PCB-Render-front_hu_14291c130371fc42.png 800w, /electronics/nixie-clock-pcb-and-assembly/PCB-Render-front_hu_86f38f422537c8eb.png 1280w"
-    sizes="(min-width: 768px) 50vw, 65vw"
-    data-zoom-src="/electronics/nixie-clock-pcb-and-assembly/PCB-Render-front.png"></figure>
-</p>
-<p>On the top side of this layer, the Nixie tubes are immediately visible. They were placed there to satisfy a few mechanical design constraints imposed by the enclosure.</p>
-<p>On the lower part of the front layer, the high-voltage generator was placed. The layout is not especially critical, so components are spaced somewhat generously to simplify assembly and debugging.</p>
-<p>In the central area of the board, the voltage regulator can be found. Its role is to supply the logic section with 4.2 V from the 12 V provided by a wall-wart power supply. Additional decoupling capacitors are distributed across the board and on the rear layer.</p>
-<p>Rear:<br>
-<figure><img
-    class="my-0 rounded-md"
-    loading="lazy"
-    decoding="async"
-    fetchpriority="auto"
-    alt="PCB Rear"
-    width="1474"
-    height="693"
-    src="/electronics/nixie-clock-pcb-and-assembly/PCB-Render-rear_hu_e7da1ca9ae2092b2.png"
-    srcset="/electronics/nixie-clock-pcb-and-assembly/PCB-Render-rear_hu_e7da1ca9ae2092b2.png 800w, /electronics/nixie-clock-pcb-and-assembly/PCB-Render-rear_hu_52ed1b1dc6d2230b.png 1280w"
-    sizes="(min-width: 768px) 50vw, 65vw"
-    data-zoom-src="/electronics/nixie-clock-pcb-and-assembly/PCB-Render-rear.png"></figure>
-</p>
-<p>The bottom layer of the PCB is where most of the interesting routing happens.</p>
-<p>In the upper area, the transistors used to drive the Nixie tubes are located. Just below them, the shift registers were placed to minimize the distance between the control logic and the transistor stages, simplifying routing and reducing unnecessary trace length.</p>
-<p>Moving toward the bottom of the board, from left to right, we find:</p>
+<p>I&rsquo;d like to set up a project to showcase a complete pipeline of data acquisition, in order to do so I need:</p>
 <ul>
-<li>The buttons used to set and control the clock</li>
-<li>The microcontroller (U4), with a set of spare pins routed to an unpopulated header for future expansion</li>
-<li>The RTC and the headers used for the backup battery</li>
-<li>A set of vias intended for debugging purposes</li>
-<li>Part of the feedback network used to set the high-voltage generator output</li>
-<li>The power input jack</li>
+<li>A physical board gathering data</li>
+<li>Some kind of daemon that receives and stores the data</li>
+<li>A visualization utility</li>
 </ul>
-<p>To simplify the assembly process, several plated mounting holes were added around the board, allowing it to be mounted on threaded standoffs for easier mechanical integration.</p>
+<p>This is both a showcase and a proof of concept, as one day I&rsquo;d like to set up a distribuited network gathering data across the valley where I live and trough the use of LoRa transmit it to a local-running DB for further analysis and visualization.</p>
 
-<h2 class="relative group">Debug
-    <div id="debug" class="anchor"></div>
+<h2 class="relative group">Hardware
+    <div id="hardware" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#debug" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#hardware" aria-label="Anchor">#</a>
     </span>
     
 </h2>
-<p>As with any good project, things didn’t work at first. Initially, I wasn’t able to get the RTC to communicate correctly.</p>
-<p>After struggling for far too long, I probed the SCL and SDA lines of the I²C bus (used to connect the microcontroller to the RTC) and observed the following:</p>
-<figure><img
-    class="my-0 rounded-md"
-    loading="lazy"
-    decoding="async"
-    fetchpriority="auto"
-    alt="scope"
-    width="4032"
-    height="3024"
-    src="/electronics/nixie-clock-pcb-and-assembly/debug_hu_b35503e4d8a3a131.jpg"
-    srcset="/electronics/nixie-clock-pcb-and-assembly/debug_hu_b35503e4d8a3a131.jpg 800w, /electronics/nixie-clock-pcb-and-assembly/debug_hu_f181b181a28dc2c6.jpg 1280w"
-    sizes="(min-width: 768px) 50vw, 65vw"
-    data-zoom-src="/electronics/nixie-clock-pcb-and-assembly/debug.jpg"></figure>
-<p>The signal can be seen slowly sloping downward, which is clearly abnormal. This behavior suggests that the line is not being properly pulled up, as required by the I²C protocol, and that turned out to be exactly the issue. In the schematic, everything was connected as intended, and I had correctly added two 1 kΩ pull-up resistors, one for each I²C line. However, during the PCB routing phase, I forgot to actually connect one end of one resistor to its corresponding I²C trace.</p>
-<p>After adding a few bodge wires to fix the mistake, I was finally able to poll the RTC successfully, and the RTC started behaving as expected.</p>
+<p>As this is a small test, I want to start out easy trying to leverage as much as possible of my already existing infrastructure, to avoid buying hardware that maybe wont even be necessary later.</p>
+<p>For this reason I decided to start out logging weather data and to ttransmit it to my local server over wifi. For the purpose an ESP32 is the perfect choice, as it allows me to easily connect to the network and talk with my server, whitout the need for any gateway in between.</p>
+<p>ESP32 ticks all the other boxes, such as:</p>
+<ul>
+<li>Low power consumption, both in low power mode (using the ULP Coprocessor) and in deep sleep (5uA)</li>
+<li>Integrated RTC</li>
+<li>Ability to sincronize the time automatically trough a NTP server</li>
+<li>ADC/PWM/Timers/I²C/SPI/UART support to connect to any sensor</li>
+<li>Lot of memory to temporarily store the data if the network is not available</li>
+</ul>
 
-<h2 class="relative group">Assembly Pictures
-    <div id="assembly-pictures" class="anchor"></div>
+<h2 class="relative group">Data gathering
+    <div id="data-gathering" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#assembly-pictures" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#data-gathering" aria-label="Anchor">#</a>
     </span>
     
 </h2>
+<p>Currently (18/01/26) I&rsquo;m in the phase of ordering the correct components. They</p>
+<ul>
+<li>Brightness/UV: LTR390</li>
+<li>Temperature and humidity: AHT20</li>
+<li>Pressure: BMP280</li>
+<li>Particulate: SPS30</li>
+<li>SCD30: CO2 sensing</li>
+</ul>
+<p>The following has been choosen for some data gathering, whitout exceeding the power budget. Another bonus is that everything is connected using I²C, simplifying the connections.</p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-
-
-<div
-  id="carousel-5d9e632e3f2a8dcab83fe17567bf8f64-1768731424232277975"
-  class="relative"
-  data-twe-carousel-init
-  data-twe-ride="carousel"
-  data-twe-interval="2000">
-  <div
-    class="absolute right-0 bottom-0 left-0 z-2 mx-[15%] mb-10 flex list-none justify-center p-0"
-    data-twe-carousel-indicators>
-    
-    
-      <button
-        type="button"
-        data-twe-target="#carousel-5d9e632e3f2a8dcab83fe17567bf8f64-1768731424232277975"
-        data-twe-slide-to="0"
-        data-twe-carousel-active aria-current="true"
-        class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-neutral bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-        aria-label="Slide 0"></button>
-      
-    
-      <button
-        type="button"
-        data-twe-target="#carousel-5d9e632e3f2a8dcab83fe17567bf8f64-1768731424232277975"
-        data-twe-slide-to="1"
-        
-        class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-neutral bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-        aria-label="Slide 1"></button>
-      
-    
-      <button
-        type="button"
-        data-twe-target="#carousel-5d9e632e3f2a8dcab83fe17567bf8f64-1768731424232277975"
-        data-twe-slide-to="2"
-        
-        class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-neutral bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-        aria-label="Slide 2"></button>
-      
-    
-      <button
-        type="button"
-        data-twe-target="#carousel-5d9e632e3f2a8dcab83fe17567bf8f64-1768731424232277975"
-        data-twe-slide-to="3"
-        
-        class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-neutral bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-        aria-label="Slide 3"></button>
-      
-    
-  </div>
-
-  <div class="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
-    
-      
-      <div
-        class="relative float-left -mr-[100%]  w-full transition-transform ease-in-out motion-reduce:transition-none"
-        data-twe-carousel-item
-        style="transition-duration: 2000ms;"
-        data-twe-carousel-active>
-        <div
-          class="single_hero_background"
-          style="aspect-ratio: 16 / 9;">
-          <img
-            src="/electronics/nixie-clock-pcb-and-assembly/gallery/pic1.jpg"
-            class="block absolute top-0 object-cover w-full h-full not-prose nozoom"
-            alt="carousel image 1">
-        </div>
-      </div>
-    
-      
-      <div
-        class="relative float-left -mr-[100%] hidden w-full transition-transform ease-in-out motion-reduce:transition-none"
-        data-twe-carousel-item
-        style="transition-duration: 2000ms;"
-        >
-        <div
-          class="single_hero_background"
-          style="aspect-ratio: 16 / 9;">
-          <img
-            src="/electronics/nixie-clock-pcb-and-assembly/gallery/pic2.jpg"
-            class="block absolute top-0 object-cover w-full h-full not-prose nozoom"
-            alt="carousel image 2">
-        </div>
-      </div>
-    
-      
-      <div
-        class="relative float-left -mr-[100%] hidden w-full transition-transform ease-in-out motion-reduce:transition-none"
-        data-twe-carousel-item
-        style="transition-duration: 2000ms;"
-        >
-        <div
-          class="single_hero_background"
-          style="aspect-ratio: 16 / 9;">
-          <img
-            src="/electronics/nixie-clock-pcb-and-assembly/gallery/pic3.jpg"
-            class="block absolute top-0 object-cover w-full h-full not-prose nozoom"
-            alt="carousel image 3">
-        </div>
-      </div>
-    
-      
-      <div
-        class="relative float-left -mr-[100%] hidden w-full transition-transform ease-in-out motion-reduce:transition-none"
-        data-twe-carousel-item
-        style="transition-duration: 2000ms;"
-        >
-        <div
-          class="single_hero_background"
-          style="aspect-ratio: 16 / 9;">
-          <img
-            src="/electronics/nixie-clock-pcb-and-assembly/gallery/pic4.jpg"
-            class="block absolute top-0 object-cover w-full h-full not-prose nozoom"
-            alt="carousel image 4">
-        </div>
-      </div>
-    
-  </div>
-
-  <button
-    class="absolute top-0 bottom-0 left-0 z-2 flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:no-underline hover:opacity-90 hover:outline-none focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
-    type="button"
-    data-twe-target="#carousel-5d9e632e3f2a8dcab83fe17567bf8f64-1768731424232277975"
-    data-twe-slide="prev">
-    <span class="inline-block h-8 w-8">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="4.5"
-        stroke="currentColor"
-        class="h-6 w-6">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-      </svg>
-    </span>
-    <span
-      class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
-      >Previous</span
-    >
-  </button>
-
-  <button
-    class="absolute top-0 bottom-0 right-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:no-underline hover:opacity-90 hover:outline-none focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
-    type="button"
-    data-twe-target="#carousel-5d9e632e3f2a8dcab83fe17567bf8f64-1768731424232277975"
-    data-twe-slide="next">
-    <span class="inline-block h-8 w-8">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="4.5"
-        stroke="currentColor"
-        class="h-6 w-6">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-      </svg>
-    </span>
-    <span
-      class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
-      >Next</span
-    >
-  </button>
-</div>
-
-
-<h2 class="relative group">Final Considerations
-    <div id="final-considerations" class="anchor"></div>
+<h2 class="relative group">Power Requirements
+    <div id="power-requirements" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#final-considerations" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#power-requirements" aria-label="Anchor">#</a>
     </span>
     
 </h2>
-<p>Has this been a perfect project? Absolutely not, quite far from it actually.</p>
-<p>Most of the problems arose when fitting everything inside the enclosure. Since the design is essentially monolithic, I had very little freedom to rearrange components. This ultimately forced me to mount the tubes directly onto the enclosure and connect them using flying wires. In hindsight, a more modular approach would have been a better choice.</p>
-<p>I should have also included more margin in the power calculations for the Nixie current-limiting resistors. At one point, a cathode shorted to ground and slowly cooked its resistor until the magic smoke was released. Next time, a more conservative worst-case scenario power dissipation calculation will be used.</p>
-<p>In general, this specific tube model was not ideal. Being an early design, it lacks the mercury added to later models, which makes it more susceptible to aging and makes it less reliable.</p>
-<p>Despite all of this, I’m still happy with how the project turned out. One day I should probably remake the wooden enclosure, but from an electrical standpoint everything has been working as expected for years aside from the occasional failed tube or dead cathode.</p>
+<p>The ESP32 should take less than 5 seconds to connect to a wifi after being woken up from deep sleep. to stay on the safe side we consider that number 10 seconds to wake, connect to the network and send the data. We assue that during this 10 seconds the board is constantly transmitting (worst case scenario in terms of power) and that as per it&rsquo;s datasheet, it&rsquo;s consuming 239mA. Assuming we do so every hour, just for the data acquisition and transmit part of the project the power consumption is around 3.3V * 0.239 A * 10/3600 = 2.2 mW</p>
+<p>The sensor are a bit more tricky, mainly because the PMSA003 needs a bit of warm up time before each reading.
+Lets go in order:</p>
+<ul>
+<li>LTR390: around 250uA while measuring, less than 1uA while dormant</li>
+<li>AHT20: Around 1mA while measuring, less than 1uA while dormant.</li>
+<li>BMP280: Around 1mA while measuring, less than 5uA while in idle.</li>
+<li>SPS30: Around 60mA at 5V while measuring.</li>
+<li>SCD30: Around 5.9mA while measuring.</li>
+</ul>
+<p>They all need some warmup time, specifically</p>
+<ul>
+<li>10ms for the LTR390</li>
+<li>100ms for the AHT20</li>
+<li>2ms for the BMP280</li>
+<li>8 to 30s for the SPS30, so we say 60 to stay on the safe side.</li>
+<li>120s for the SCD30</li>
+</ul>
+<p>Since the SPS30 is measuring a physical property that doesnt change infinitely fast and since is the most energy hungry device, we can try to understand how little can we run it to get meaningful data, in order not to worsen the data quality, but yet make it use as little energy as needed.</p>
+<p>Using <a
+  href="https://charts.ecmwf.int/catalogue/packages/cams_air_quality_eea/products/plume_cams_eu_particulate_matter_2.5um_eea"
+    target="_blank"
+  >this site</a> I can see that the graphs point are updated hourly, thanks to that (and the fact that the values move slowly) I decided to sample the air every 20 minutes, and to dial it back to once an hour if the system consumes too much power.
+Instead for the other sensors we can safely sample them every 10 minutes and give them a warm-up period of 5 seconds since they dont consume much power.</p>
+<p>Now that we have done all our homeworks, we can finally extimate the Wh needed to run the sensors.</p>
+<ul>
+<li>PMSA003: 5V<em>0.06A</em>1/60*3 = 15mW</li>
+<li>SCD30: 3.3V<em>0.0059A</em>2/60*6 = 3.9mW</li>
+<li>All the other sensors: 3.3V<em>0.003A</em>5/3600*6 = 0.1mW</li>
+</ul>
+<p>after getting power to the battery, we still need to reduce the voltage to something that can be managed by the esp since it needs a voltage between 2.3 and 3.6 volts. Since we have high current bursts during the wifi usage a switching voltage regulator is needed. This will increase a bit the power consumption but will probably make the system more efficient at high battery SOC where there will be less lost power.</p>
+<p>I&rsquo;m hoping to complete this project quickly using using just off the shelf parts, a TPS63020 board was chosen, this is a buck-boost converter, so it&rsquo;s able to maintain a fixed output voltage even if the battery dips below 3.3V.
+Two of these board will be used, one for the esp, and one to supply 5v to the SPS30.
+Since these are ready made boards they are not terribly focused on efficiency, and from the little that i gathered even though the IC should have a operating quiescent current of around 25uA the boards consumes around 400uA while noting is connected.
+Again, this will eat out around 3.7*0.0004 = 1.5mW.</p>
+<p>All considered, running the sensor as described above and sending the data to a server once an hour, plus the energy lost for the power supply we would need around 2.2mW + 15mW + 3.9mW + 0.1mW + 1.5mW = 22.7mW</p>
+
+<h2 class="relative group">Power Source Selection
+    <div id="power-source-selection" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#power-source-selection" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The idea is to have a self contained unit, able to be deployed mostly anywhere. To do so a solar panel becomes necessary to generate power (or an <a
+  href="https://en.wikipedia.org/wiki/Radioisotope_thermoelectric_generator"
+    target="_blank"
+  >RTG</a>, but the cops wouldn&rsquo;t be happy about it).</p>
+<p>To get an idea of the power that a solar panel could produce, we turn to this <a
+  href="https://re.jrc.ec.europa.eu/pvg_tools/en/tools.html"
+    target="_blank"
+  >useful site from the EU</a>.</p>
+<p>It&rsquo;s good practise to design for the worst case, from this page, for my particular location, I can see that the month with less sun it&rsquo;s december, and that for a panel at a 0° angle (ie liying flat on the ground) the irradiation is around 32 kWh/m² during that month.
+Keeping in mind that monocristalline have an efficiency of around 15% and polycristalline 13%, we now know that a monocristalline solar panel generates 32<em>0.15 = 4.8kWh/m² each month, or 4.8/(31</em>24) = 6.4 Wh/(m²*h), which basically means that a 1m² panel would produce on average 6.4W. (5.5 W average for a 1m² polycristalline one).</p>
+<p>To avoid loosing energy, i decided to use an MPPT converter to charge the lithium battery. The CN3791 seems to be the perfect choice for our use case, it&rsquo;s specifically designed to charge 1S lithium batteries from a solar panel, implements MPPT and has a constant current function for the end of charge stage of the battery.
+Looking at it&rsquo;s datasheet it&rsquo;s not clear what efficiency it has in the real world, but usually a 90% efficiency is realistic for this kind of devices.</p>
+<p>So, to actually supply power to our little happy device we need 20.5mW / 90% efficiency = 22.8mW, which means that with an average power of 5.5W/m² we would need a solar panel of 0.0227/5.5 = 0.0041m², or a square panel with the sides of 65mm each.</p>
+<p>Thermal derating considerations dont apply here, since during the summer the panels could get hotter, losing 10-15% of power, yet the solar radiation would be much higher, meaning that we still have plenty of power during the summer. On the bright side, during winter, with its shorter days and reduced irradiance, we may actually gain some efficiency (around 0.3-0.5% for each degree).</p>
+<p>And since we know that solar panels are characterized at 1000W/m² we also know that we would need a panel with a nominal power odf 0.0041m²<em>1000W/m²</em>0.15% = 0.615W panel. Assuming the specs given to us on Aliexpress are to be trusted.</p>
+<p>Since we want to have some headroom and a</p>
 
           
           
@@ -1254,8 +1075,8 @@
           type="text/javascript"
           src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
           integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
-          data-oid="views_electronics/nixie-clock:-pcb-and-assembly/index.md"
-          data-oid-likes="likes_electronics/nixie-clock:-pcb-and-assembly/index.md"></script>
+          data-oid="views_electronics/esp32-weather-station/index.md"
+          data-oid-likes="likes_electronics/esp32-weather-station/index.md"></script>
       
     </section>
 
@@ -1273,14 +1094,14 @@
           
             <a
               class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/electronics/1765227771081-nixie-clock-software/">
+              href="/electronics/nixie-clock-pcb-and-assembly/">
               <span class="leading-6">
-                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Nixie Clock: Software
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Nixie Clock: PCB and Assembly
               </span>
             </a>
             
               <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2025-11-23T00:00:00&#43;00:00">23 November 2025</time>
+                <time datetime="2026-01-11T00:00:00&#43;00:00">11 January 2026</time>
               </span>
             
           
