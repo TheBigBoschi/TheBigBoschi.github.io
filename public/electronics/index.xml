@@ -10,6 +10,16 @@
     <lastBuildDate>Sun, 18 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/electronics/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>ESP32 data acquisition board: HW requirements</title>
+      <link>http://localhost:1313/electronics/esp32-weather-station/</link>
+      <pubDate>Sun, 18 Jan 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/electronics/esp32-weather-station/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/electronics/esp32-weather-station/featured.jpeg" />
+    </item>
+    
+    <item>
       <title>Nixie Clock: PCB and Assembly</title>
       <link>http://localhost:1313/electronics/nixie-clock-pcb-and-assembly/</link>
       <pubDate>Sun, 11 Jan 2026 00:00:00 +0000</pubDate>
