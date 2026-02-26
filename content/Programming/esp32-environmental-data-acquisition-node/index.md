@@ -25,7 +25,29 @@ per inviare: curl -d "ciao" mqtt://esp32:test@192.168.1.20:1883/esp/test // -d s
 oppure: curl -u "esp32:test" -d "hello" mqtt://192.168.1.20:1883/esp/test
 
 Server funzionante, autenticazione funziaaa.
-per gestire megliio la cosa uso mqtt explorer, ho una gui e nasce per l'mqtt, solo che una volta installato il .deb non va. Oh well!
+per gestire megliio la cosa uso mqtt explorer, ho una gui e nasce per l'mqtt, uso snap, il .deb ha problemi
+per qualche motivo mosquitto non mi aggiunge correttamente un secondo utente, come workaround ho copiato l'hash
+
+Per il FW, l'idea è di fare il provisioning tramite libreria, poi se ho delle credenziali in memoria uso i metodi standard espressif, questo perche la libreria per qualche motivo ci mette dai 40 ai 90s secondi per connettersi
+
+il reset delle credenziali per qualche motivo va ripetuto 2 volte, una dopo il reboot. da indagare.
+
+https://github.com/terdia/mqttui da indagare. MQTT client con web GUI, containerizzato.
+
+SPS30: porting libreria e lato HW devo mettere il level shifter. nvm, i2c, open drain e open collector non ha problemi a funzionare finche il VIH è abbastanza alto, e basta sia > 2.3V per funzionare quindi non ho bisogno uno shift register, la vmax è data dalle resistenze di pullup.
+
+## inizio il porting della libreriaaa
+Mannaggia.
+
+uso i2ctools di espressif per giocare con l'i2c senza scrivere un programma.
+i2c-tools> i2cset -c 0x69 -r 0x01 0x04  ferma la misurazione
+i2c-tools> i2cset -c 0x69 -r 0x00 0x10 0x05 0x00 0xF6   0x0010 inizia le misurazioni, e accende la ventola. 0x0500F6 i primi 2 byte indicano scrivi uint16 per i valori, F6 è il crc polinomiale ecc
+
+paragrafo sul cuntrollare scl e sda, ti sei messo le mani tra i capelli e poi avevi invertito i 2.
+
+https://sensirion.com/media/documents/1E3CD1FF/6165AFE4/Sensirion_GF_AN_SFM-04_CRC_Checksum_D1.pdf
+
+usa i2c master read e non i2c master read write. 
 
 
 
