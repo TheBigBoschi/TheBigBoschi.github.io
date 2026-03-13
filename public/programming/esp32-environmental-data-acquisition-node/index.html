@@ -59,9 +59,11 @@
     <meta property="article:section" content="programming">
     <meta property="article:published_time" content="2026-01-20T00:00:00+00:00">
     <meta property="article:modified_time" content="2026-01-20T00:00:00+00:00">
+    <meta property="og:image" content="http://localhost:1313/programming/esp32-environmental-data-acquisition-node/featured.png">
 
   
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/programming/esp32-environmental-data-acquisition-node/featured.png">
   <meta name="twitter:title" content="Esp32 Environmental Data Acquisition Node">
   <meta name="twitter:description" content="A blog about electronics and programming">
 
@@ -74,15 +76,9 @@
     
   
     
-      
-    
   
     
-      
-    
   
-  
-    
   
 
   
@@ -229,7 +225,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "1"
+    "wordCount": "1305"
   }]
   </script>
 
@@ -375,6 +371,24 @@
   
     <p class="text-base font-medium">
       About me
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <a
+  href="/programming/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="Programming"
+  title="Programmings">
+  
+  
+    <p class="text-base font-medium">
+      Programming
     </p>
   
 </a>
@@ -556,6 +570,26 @@
               
   <li class="mt-1">
   <a
+    href="/programming/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="Programming"
+    title="Programmings">
+    
+    
+      <p class="text-bg font-bg">
+        Programming
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
     href=""
     
     class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
@@ -648,7 +682,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-01-20T00:00:00&#43;00:00">20 January 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1 word</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
+      <time datetime="2026-01-20T00:00:00&#43;00:00">20 January 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1305 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">7 mins</span>
     
 
     
@@ -765,13 +799,370 @@
       
       
       
+        <div class="order-first lg:ml-auto px-0 lg:order-last lg:ps-8 lg:max-w-2xs">
+          <div class="toc ps-5 print:hidden lg:sticky lg:top-10">
+            
+              <details
+  open
+  id="TOCView"
+  class="toc-right mt-0 overflow-y-auto overscroll-contain scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 rounded-lg -ms-5 ps-5 pe-2 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#broker-setup">Broker setup</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#modem-sleep-mode">Modem sleep mode</a></li>
+    <li><a href="#sensor-polling">Sensor polling</a></li>
+    <li><a href="#deep-sleep">deep sleep</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg -ms-5 ps-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#broker-setup">Broker setup</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#modem-sleep-mode">Modem sleep mode</a></li>
+    <li><a href="#sensor-polling">Sensor polling</a></li>
+    <li><a href="#deep-sleep">deep sleep</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+
+<script>
+  (function () {
+    'use strict'
+
+    const SCROLL_OFFSET_RATIO = 0.33
+    const TOC_SELECTOR = '#TableOfContents'
+    const ANCHOR_SELECTOR = '.anchor'
+    const TOC_LINK_SELECTOR = 'a[href^="#"]'
+    const NESTED_LIST_SELECTOR = 'li ul'
+    const ACTIVE_CLASS = 'active'
+    let isJumpingToAnchor = false
+
+    function getActiveAnchorId(anchors, offsetRatio) {
+      const threshold = window.scrollY + window.innerHeight * offsetRatio
+      const tocLinks = [...document.querySelectorAll('#TableOfContents a[href^="#"]')]
+      const tocIds = new Set(tocLinks.map(link => link.getAttribute('href').substring(1)))
+
+      if (isJumpingToAnchor) {
+        for (let i = 0; i < anchors.length; i++) {
+          const anchor = anchors[i]
+          if (!tocIds.has(anchor.id)) continue
+          const top = anchor.getBoundingClientRect().top + window.scrollY
+          if (Math.abs(window.scrollY - top) < 100) {
+            return anchor.id
+          }
+        }
+      }
+
+      for (let i = anchors.length - 1; i >= 0; i--) {
+        const top = anchors[i].getBoundingClientRect().top + window.scrollY
+        if (top <= threshold && tocIds.has(anchors[i].id)) {
+          return anchors[i].id
+        }
+      }
+      return anchors.find(anchor => tocIds.has(anchor.id))?.id || ''
+    }
+
+    function updateTOC({ toc, anchors, links, scrollOffset, collapseInactive }) {
+      const activeId = getActiveAnchorId(anchors, scrollOffset)
+      if (!activeId) return
+
+      links.forEach(link => {
+        const isActive = link.getAttribute('href') === `#${activeId}`
+        link.classList.toggle(ACTIVE_CLASS, isActive)
+
+        if (collapseInactive) {
+          const ul = link.closest('li')?.querySelector('ul')
+          if (ul) ul.style.display = isActive ? '' : 'none'
+        }
+      })
+
+      if (collapseInactive) {
+        const activeLink = toc.querySelector(`a[href="#${CSS.escape(activeId)}"]`)
+        let el = activeLink
+        while (el && el !== toc) {
+          if (el.tagName === 'UL') el.style.display = ''
+          if (el.tagName === 'LI') el.querySelector('ul')?.style.setProperty('display', '')
+          el = el.parentElement
+        }
+      }
+    }
+
+    function initTOC() {
+      const toc = document.querySelector(TOC_SELECTOR)
+      if (!toc) return
+
+      const collapseInactive = false
+      const anchors = [...document.querySelectorAll(ANCHOR_SELECTOR)]
+      const links = [...toc.querySelectorAll(TOC_LINK_SELECTOR)]
+
+      if (collapseInactive) {
+        toc.querySelectorAll(NESTED_LIST_SELECTOR).forEach(ul => ul.style.display = 'none')
+      }
+
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+          isJumpingToAnchor = true
+        })
+      })
+
+      const config = {
+        toc,
+        anchors,
+        links,
+        scrollOffset: SCROLL_OFFSET_RATIO,
+        collapseInactive
+      }
+
+      window.addEventListener('scroll', () => updateTOC(config), { passive: true })
+      window.addEventListener('hashchange', () => updateTOC(config), { passive: true })
+
+      updateTOC(config)
+    }
+
+    document.readyState === 'loading'
+      ? document.addEventListener('DOMContentLoaded', initTOC)
+      : initTOC()
+  })()
+</script>
+
+
+            
+          </div>
+        </div>
+      
 
 
       <div class="min-w-0 min-h-0 max-w-fit">
         
 
         <div class="article-content max-w-prose mb-20">
-          <p>asd</p>
+          
+<h2 class="relative group">Overview
+    <div id="overview" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#overview" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In the previous post I defined what the HW architecture should look like, now I&rsquo;m turning to the software.</p>
+<p>The flow here is pretty simple:
+Read the data -&gt; send it over the WiFi to a server (local or not) -&gt; Do some backend magic and save it to a DB. For now I&rsquo;m concentrating over the first two steps.</p>
+<p>Even before thinking about the SW on the ESP I realized that a pretty important piece here was the protocol with wich my data would move on my network and get to my server.</p>
+<p>I started by laying out my requirements:</p>
+<ul>
+<li>Low overhead</li>
+<li>Ease of implementation</li>
+<li>Bidirectional</li>
+<li>Safe</li>
+<li>OK with less-than-ideal signal/internet reception</li>
+<li>Scalable (Just for fun!)</li>
+</ul>
+<p>Usually the go-to in the web realm the REST protocol is the go to for web application, but this is not a web app and it has drawbacks in my use case, first of all that i cant achieve bidirectional communication easily from my network to a server on the cloud since my network (as most are actually) is behind a NAT.</p>
+<p>In this case I choose to use a MQTT server to move the data, since it&rsquo;s extremely data-efficient (low overhead), the client implementation is maintained by espressif and well documented (easy to implement), I can easily send data to a topic while subsribe to another (bidirectiona data flow), has a qos parameter that ensure that my message gets delivered to the broker (reliabile with bad network), gives me the possibility to have TLS and to autenticate my client on the server.</p>
+<p>It has two main drawback for me:</p>
+<ul>
+<li>while waiting for commands it keep the modem on</li>
+<li>It needs a MQTT broker to work</li>
+</ul>
+<p>Regarding the first point, with the modem low power mode it should consume just 80mA while wating, and it should not impact too much my power budget if i keep it on for just 30-60 seconds every time that it&rsquo;s waiting for commands from the server.</p>
+<p>Regarding the second, I consider the broker to be part of the backend services, and since i need a DB i can just run it togheter.</p>
+
+<h2 class="relative group">Broker setup
+    <div id="broker-setup" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#broker-setup" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>I found out that the industry standard MQTT broker is mosquitto. It&rsquo;s lightweight, free and open source.
+As always, docker rules, and I found a container running it.
+In my setup, at least for now, the container is hosted on a x64 server reachable at 192.168.1.20 address.</p>
+<p>To run it just save the following text in a file called compose.yaml:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">services</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">mosquitto</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">eclipse-mosquitto:2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">mosquitto</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l">unless-stopped</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="m">1883</span><span class="p">:</span><span class="m">1883</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="m">8883</span><span class="p">:</span><span class="m">8883</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="m">9001</span><span class="p">:</span><span class="m">9001</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">/path/to/config:/mosquitto/config</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">/path/to/data:/mosquitto/data</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">/path/to/log:/mosquitto/log</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">mqtt</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">mqtt</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l">bridge</span><span class="w">
+</span></span></span></code></pre></div><p>And then in the same folder as the file type</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker-compose up
+</span></span></code></pre></div><p>It&rsquo;s important to specify the paths to route out in the compose file in order to maintain the config and the data even if the container gets updated.</p>
+<p>In my code I&rsquo;m autenticating the clients (but I&rsquo;m not using TLS until I move the broker to a vps at least), to do so we have to create the users and specify theyr password. For now a there is a shared user for all the clients.</p>
+<p>To do so log in the container and run the following command:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mosquitto_passwd /mosquitto/config/mosquitto.password esp32 //personalize esp32 with your username
+</span></span></code></pre></div><p>It will then prompt for the user password.</p>
+<p>To actually test the configuration we can use Curl to send and to receive the payload in two separate terminals.</p>
+<p>First, to open the receiving terminal:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -N -u <span class="s2">&#34;esp32:password&#34;</span> mqtt://192.168.1.20:1883/esp/test --output  //password is the password that we have <span class="nb">set</span> before
+</span></span></code></pre></div><p>And then, to send the message &ldquo;hello&rdquo; to the other terminal:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -u <span class="s2">&#34;esp32:password&#34;</span> -d <span class="s2">&#34;hello&#34;</span> mqtt://192.168.1.20:1883/esp/test
+</span></span></code></pre></div><p>Notice that the URL is composed of the following parts:</p>
+<ul>
+<li><code>mqtt://</code> Specifies the protocol tu curl</li>
+<li><code>192.168.1.20</code> IP of the broker</li>
+<li><code>:1883</code> Port to send the messages. 1833 for unencripted data, 8883 for using TLS.</li>
+<li><code>/esp/test</code> The topic in wich the payload will be sent to. You can send to multiple topics using the same connection. It&rsquo;s useful to post data and telemetry or warning in separated channels.</li>
+</ul>
+<p>The received message will have the following format: <code>*topic**payload*</code> this is normal, it&rsquo;s just that curl it&rsquo;s not the right tool for the job here.</p>
+<p>Once the broker is up and running we can move to a better tool to visualize the received payload, my personal reccomendation is MQTT Explorer, also available from the App center on Ubuntu. It&rsquo;s just plug and play, no fuss.</p>
+<p>Server funzionante, autenticazione funziaaa.
+per gestire megliio la cosa uso mqtt explorer, ho una gui e nasce per l&rsquo;mqtt, uso snap, il .deb ha problemi
+per qualche motivo mosquitto non mi aggiunge correttamente un secondo utente, come workaround ho copiato l&rsquo;hash</p>
+<p>Per il FW, l&rsquo;idea è di fare il provisioning tramite libreria, poi se ho delle credenziali in memoria uso i metodi standard espressif, questo perche la libreria per qualche motivo ci mette dai 40 ai 90s secondi per connettersi</p>
+<p>il reset delle credenziali per qualche motivo va ripetuto 2 volte, una dopo il reboot. da indagare.</p>
+<p><a
+  href="https://github.com/terdia/mqttui"
+    target="_blank"
+  >https://github.com/terdia/mqttui</a> da indagare. MQTT client con web GUI, containerizzato.</p>
+<p>SPS30: porting libreria e lato HW devo mettere il level shifter. nvm, i2c, open drain e open collector non ha problemi a funzionare finche il VIH è abbastanza alto, e basta sia &gt; 2.3V per funzionare quindi non ho bisogno uno shift register, la vmax è data dalle resistenze di pullup.</p>
+
+<h1 class="relative group">inizio il porting della libreriaaa
+    <div id="inizio-il-porting-della-libreriaaa" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#inizio-il-porting-della-libreriaaa" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>Mannaggia.</p>
+<p>uso i2ctools di espressif per giocare con l&rsquo;i2c senza scrivere un programma.
+i2c-tools&gt; i2cset -c 0x69 -r 0x01 0x04  ferma la misurazione
+i2c-tools&gt; i2cset -c 0x69 -r 0x00 0x10 0x05 0x00 0xF6   0x0010 inizia le misurazioni, e accende la ventola. 0x0500F6 i primi 2 byte indicano scrivi uint16 per i valori, F6 è il crc polinomiale ecc</p>
+<p>paragrafo sul cuntrollare scl e sda, ti sei messo le mani tra i capelli e poi avevi invertito i 2.</p>
+<p><a
+  href="https://sensirion.com/media/documents/1E3CD1FF/6165AFE4/Sensirion_GF_AN_SFM-04_CRC_Checksum_D1.pdf"
+    target="_blank"
+  >https://sensirion.com/media/documents/1E3CD1FF/6165AFE4/Sensirion_GF_AN_SFM-04_CRC_Checksum_D1.pdf</a></p>
+<p>usa i2c master read e non i2c master read write.</p>
+<p>dal datasheet ce la procedura per accendere e usare il modulo</p>
+<p><a
+  href="https://www.ti.com/lit/an/slva704/slva704.pdf?ts=1770857779462"
+    target="_blank"
+  >https://www.ti.com/lit/an/slva704/slva704.pdf?ts=1770857779462</a></p>
+<p>i2c tools lavora a byte, non gestisce le word. quindi per scrivere 0x1103 (wakeup) devo usare
+i2cset -c 0x69 -r 0x11 0x03
+altrimenti perde pezzi</p>
+<p>per impacchettare il componente: <a
+  href="https://github.com/espressif/example_components"
+    target="_blank"
+  >https://github.com/espressif/example_components</a></p>
+
+<h1 class="relative group">Sleep
+    <div id="sleep" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#sleep" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>Ho modellato il sistema come una SM, devo gestire edge cases.</p>
+
+<h2 class="relative group">Modem sleep mode
+    <div id="modem-sleep-mode" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#modem-sleep-mode" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>hai fatto SM per definire i vari stati
+Quando sei in attesa di istruzioni dal server usi la ESP32 Modem Sleep Mode per ridurre i consumi. Questo fa si che il device si svegli solodurante l&rsquo;intervallo DTIM.
+modalita min -&gt; si sveglia ogni tot per controllare
+modalita max -&gt; si veglia SOLO ogni DTIM per mantenere la connessione, puo perdere pachetti.
+max mode:
+wifi_config_t wifi_config = {
+.sta = {
+.ssid = &ldquo;MY_SSID&rdquo;,
+.password = &ldquo;MY_PASS&rdquo;,
+.listen_interval = 10, // Wake up every 10 beacons
+}, NON SI FA A RUNTIME, SOLO PRIMA DELLA CONNESSIONE.</p>
+<p>se metti listen_interval = n ti svegli ogni n dtim. ha senso solo in max config.
+NB! hai DTIM pari a 1 sec, NON laori in max mode, solo in min.
+per lavorare in min mode fai esp_wifi_set_ps(x); con WIFI_PS_NONE o WIFI_PS_MIN_MODEM (o WIFI_PS_MAX_MODEM) a runtime, dopo che il wifi è stato acceso. Lo fai quando non sei in provisioning, altrimenti alzi la latenza.</p>
+<p>piu info ( e reference): <a
+  href="https://github.com/espressif/esp-idf/tree/v5.5.3/examples/wifi/power_save"
+    target="_blank"
+  >https://github.com/espressif/esp-idf/tree/v5.5.3/examples/wifi/power_save</a></p>
+
+<h2 class="relative group">Sensor polling
+    <div id="sensor-polling" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#sensor-polling" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Mentre polli i sensori lavori con frequenza dinamica. attivi il dynamic scaling con <a
+  href="https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-reference/system/power_management.html"
+    target="_blank"
+  >https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-reference/system/power_management.html</a></p>
+
+<h2 class="relative group">deep sleep
+    <div id="deep-sleep" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#deep-sleep" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Reference:
+<a
+  href="https://github.com/espressif/esp-idf/tree/v5.5.3/examples/system/deep_sleep"
+    target="_blank"
+  >https://github.com/espressif/esp-idf/tree/v5.5.3/examples/system/deep_sleep</a>
+<a
+  href="https://github.com/espressif/esp-idf/blob/v5.5.3/examples/system/deep_sleep/main/deep_sleep_example_main.c#L128"
+    target="_blank"
+  >https://github.com/espressif/esp-idf/blob/v5.5.3/examples/system/deep_sleep/main/deep_sleep_example_main.c#L128</a></p>
+<p>RTC wake signal: ESP_ERROR_CHECK(esp_sleep_enable_timer_wakeup(wakeup_time_sec * 1000000)); configura anche un GPIO? o resetti?
+per mandare in sleep uso esp_deep_sleep_start();</p>
+<p>svegliarsi da un deep sleep è uguale a fare un reset, l&rsquo;unica differenza la ho consultando esp_sleep_get_wakeup_cause();
+e per il fatto che quello che ho messo in rtc ram prima dello sleep rimane.</p>
 
           
           

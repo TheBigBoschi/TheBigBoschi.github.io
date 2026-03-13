@@ -22,7 +22,7 @@ rssnext = { }
 advertisement = { }
 smartTOC = true
 smartTOCHideUnfocusedChildren = false
-mainSections = [ "linux", "electronics" ]
+mainSections = [ "linux", "electronics","programming" ]
 
 [header]
 layout = "basic"

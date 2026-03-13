@@ -19,5 +19,11 @@ pageRef = "linux"
 identifier = "n8UPgK7pWu"
 weight = 2
 
+[[main]]
+name = "Programming"
+pageRef = "programming"
+identifier = "h0pxiTdgrU"
+weight = 9_999
+
 [[footer]]
 none = "none"

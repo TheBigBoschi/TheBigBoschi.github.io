@@ -18,7 +18,9 @@ In order to do so I need:
 
 As this is a small test, I want to start out easy, trying to leverage as much as possible my already existing infrastructure, to avoid buying hardware that may not even be necessary later.
 
-For this reason I decided to start out logging weather data and to transmit it to my local server over WiFi. For this purpose an ESP32 is the perfect choice, as it allows me to easily connect to the network and talk with my server, without the need for any gateway in between.
+For this reason I decided to start out logging weather data and to transmit it to my local server over WiFi, as it allows me to test the most delicate part of this project, the hardware, and it allows me to just ignore the LORA part for now, as to make it work reliably over long distances it would need a long validation phase and to set up nodes in places that are not convenient to get to.
+
+For this purpose an ESP32 is the perfect choice, as it allows me to easily connect to the network and talk with my server, without the need for any gateway in between.
 
 The ESP32 ticks all the other boxes, such as:
 
