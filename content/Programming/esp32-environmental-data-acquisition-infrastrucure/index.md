@@ -68,13 +68,17 @@ docker-compose up
 
 It's important to specify the paths to route out in the compose file in order to maintain the config and the data even if the container gets updated.
 
+## User authentication
+
 In my code I'm authenticating the clients (but I'm not using TLS until I move the broker to a vps at least), to do so we have to create the users and specify their password. For now there is shared user for all the clients.
 
 To do so log in the container and run the following command:
 ```bash
 mosquitto_passwd /mosquitto/config/mosquitto.password esp32 //personalize esp32 with your username
 ```
-It will then prompt for the user password.
+It will then prompt for the user password. Type it, and after pressing enter the user is ready to go.
+
+## Setup testing
 
 To actually test the configuration we can use Curl to send and to receive the payload in two separate terminals.
 
@@ -99,5 +103,5 @@ Once the broker is up and running we can move to a better tool to visualize the 
 I already developed part of the firmware, so I wanted to test it out, and after loading the correct credentials I got the following:
 ![First Payload](FirstMessage.png)
 
-Which means everything is working fine.
+Which means everything is working fine, and I'm ready to move to the next step.
 

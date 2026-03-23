@@ -225,7 +225,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "858"
+    "wordCount": "885"
   }]
   </script>
 
@@ -682,7 +682,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-01-20T00:00:00&#43;00:00">20 January 2026</time><span class="px-2 text-primary-500">&middot;</span><span>858 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">5 mins</span>
+      <time datetime="2026-01-20T00:00:00&#43;00:00">20 January 2026</time><span class="px-2 text-primary-500">&middot;</span><span>885 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">5 mins</span>
     
 
     
@@ -817,6 +817,8 @@
     <li><a href="#overview">Overview</a></li>
     <li><a href="#protocol">Protocol</a></li>
     <li><a href="#broker-setup">Broker setup</a></li>
+    <li><a href="#user-authentication">User authentication</a></li>
+    <li><a href="#setup-testing">Setup testing</a></li>
   </ul>
 </nav>
   </div>
@@ -833,6 +835,8 @@
     <li><a href="#overview">Overview</a></li>
     <li><a href="#protocol">Protocol</a></li>
     <li><a href="#broker-setup">Broker setup</a></li>
+    <li><a href="#user-authentication">User authentication</a></li>
+    <li><a href="#setup-testing">Setup testing</a></li>
   </ul>
 </nav>
   </div>
@@ -1027,10 +1031,30 @@ In my setup, at least for now, the container is hosted on a x64 server reachable
 </span></span></span></code></pre></div><p>And then in the same folder as the file, run the following command:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker-compose up
 </span></span></code></pre></div><p>It&rsquo;s important to specify the paths to route out in the compose file in order to maintain the config and the data even if the container gets updated.</p>
+
+<h2 class="relative group">User authentication
+    <div id="user-authentication" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#user-authentication" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
 <p>In my code I&rsquo;m authenticating the clients (but I&rsquo;m not using TLS until I move the broker to a vps at least), to do so we have to create the users and specify their password. For now there is shared user for all the clients.</p>
 <p>To do so log in the container and run the following command:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mosquitto_passwd /mosquitto/config/mosquitto.password esp32 //personalize esp32 with your username
-</span></span></code></pre></div><p>It will then prompt for the user password.</p>
+</span></span></code></pre></div><p>It will then prompt for the user password. Type it, and after pressing enter the user is ready to go.</p>
+
+<h2 class="relative group">Setup testing
+    <div id="setup-testing" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#setup-testing" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
 <p>To actually test the configuration we can use Curl to send and to receive the payload in two separate terminals.</p>
 <p>First, to open the receiving terminal:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -N -u <span class="s2">&#34;esp32:password&#34;</span> mqtt://192.168.1.20:1883/esp/test --output  //password is the password that we have <span class="nb">set</span> before
@@ -1059,7 +1083,7 @@ In my setup, at least for now, the container is hosted on a x64 server reachable
     sizes="(min-width: 768px) 50vw, 65vw"
     data-zoom-src="/programming/esp32-environmental-data-acquisition-infrastrucure/FirstMessage.png"></figure>
 </p>
-<p>Which means everything is working fine.</p>
+<p>Which means everything is working fine, and I&rsquo;m ready to move to the next step.</p>
 
           
           
