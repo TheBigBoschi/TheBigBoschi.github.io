@@ -7,16 +7,26 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Andrea Cerfoglia</copyright>
-    <lastBuildDate>Tue, 20 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/programming/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 18 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/programming/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Esp32 Environmental Data Acquisition Node</title>
-      <link>http://localhost:1313/programming/esp32-environmental-data-acquisition-node/</link>
+      <title>Sps30 I2C Library</title>
+      <link>http://localhost:1313/programming/sps30-i2c-library/</link>
+      <pubDate>Wed, 18 Mar 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/programming/sps30-i2c-library/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/programming/sps30-i2c-library/featured.png" />
+    </item>
+    
+    <item>
+      <title>Esp32 Environmental Data Acquisition: Infrastructure setup</title>
+      <link>http://localhost:1313/programming/esp32-environmental-data-acquisition-infrastrucure/</link>
       <pubDate>Tue, 20 Jan 2026 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/programming/esp32-environmental-data-acquisition-node/</guid>
+      <guid>http://localhost:1313/programming/esp32-environmental-data-acquisition-infrastrucure/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/programming/esp32-environmental-data-acquisition-node/featured.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/programming/esp32-environmental-data-acquisition-infrastrucure/featured.png" />
     </item>
     
   </channel>
