@@ -1,7 +1,7 @@
 ---
 date: 2026-03-23
 draft: true
-title: "Esp32 Enviromental Data Acquisition Node: Software"
+title: "ESP32 Enviromental Data Acquisition Node: Software"
 ---
 
 Server funzionante, autenticazione funziaaa.

@@ -1,13 +1,13 @@
 ---
 date: 2026-03-18
 draft: false
-title: "Sps30 I2C Library"
+title: "SPS30 I2C Library"
 ---
 ## Overview
 
-For my project I chose to use an sps30 as the particulate sensor, which is nice. But... how should I read it?
+For my project I chose to use a SPS30 as the particulate sensor, which is nice. But... how should I read it?
 
-Looking at the [datasheet](https://sensirion.com/media/documents/8600FF88/64A3B8D6/Sensirion_PM_Sensors_Datasheet_SPS30.pdf) at page 4 it's possible to see the pinout, and looking at the sel pin (pin number 4) it tells us a very interesting thing: by connecting it to ground or by leaving it floating the sensor is able to communicate through UART or I2C. Since all the other sensors are communicating using I2C, to keep the wiring to a minimum I can use it for the sps30 as well.
+Looking at the [datasheet](https://sensirion.com/media/documents/8600FF88/64A3B8D6/Sensirion_PM_Sensors_Datasheet_SPS30.pdf) at page 4 it's possible to see the pinout, and looking at the sel pin (pin number 4) it tells us a very interesting thing: by connecting it to ground or by leaving it floating the sensor is able to communicate through UART or I2C. Since all the other sensors are communicating using I2C, to keep the wiring to a minimum I can use it for the SPS30 as well.
 
 ## Hardware
 
@@ -27,7 +27,7 @@ As I2C lines need an external pull-up resistance, we need to connect a 4.7K resi
 I just wanted to verify that the sensor is actually working as expected before spending too much time scratching my head staring at a "it should work" piece of code.
 
 To do so I flashed the i2ctools firmware provided by espressif to launch some commands from the CLI of my PC.
-What I quickly discovered is that the FW is able to just work with devices that use a one byte register address, while the sps30 uses two bytes for the register address. 
+What I quickly discovered is that the FW is able to just work with devices that use a one byte register address, while the SPS30 uses two bytes for the register address. 
 
 As this device works in big-endian, setting a two bytes register address is virtually the same as setting a one byte address and then writing another byte to it. To bypass the limitations of the i2ctools firmware, I just did so.
 
@@ -59,9 +59,9 @@ I then did what I should have done from the beginning: I connected the sensor to
 
 The sensor was supposed to be working, yet I was not able to read data from it. At one point I realized that using i2c_master_transmit_receive() was not working, while i2c_master_write() first and i2c_master_read() later was working as expected.
 
-I'm not entirely sure what was the problem here, especially since now, while writing this article I'm double checking the waveforms and no obvious cause jumps out. From what I gathered there are often issues with repeated start conditions while using the new drivers for the esp32 I2C peripheral, but this is not the case since the sps30 simply does not pull down the line to give an ACK, and so the transmission just fails.
+I'm not entirely sure what was the problem here, especially since now, while writing this article I'm double checking the waveforms and no obvious cause jumps out. From what I gathered there are often issues with repeated start conditions while using the new drivers for the esp32 I2C peripheral, but this is not the case since the SPS30 simply does not pull down the line to give an ACK, and so the transmission just fails.
 
-Debugging this was a pain because everything looked correct but the last bit of the address select packet, the ACK signaling that the sps30 was indeed listening to the data, did not get pulled down when needed, generating a NACK instead and failing the operation.
+Debugging this was a pain because everything looked correct but the last bit of the address select packet, the ACK signaling that the SPS30 was indeed listening to the data, did not get pulled down when needed, generating a NACK instead and failing the operation.
 
 {{< gallery >}}
   <img src="ACK.png" class="grid-w100" caption="Third caption"/>
@@ -135,7 +135,7 @@ The library is composed by the following functions, named following the datashee
 These allow to change the sensor's internal state, and to return the data.
 I have choosen to maintain the same style as the esp-idf examples, using opaque pointers and keeping as much as possible an object oriented paradigm, trying to encapsulate the implementation logic away, and to provide minimal interfaces to interact with the sensor. This in turn helps with scalability, reusability and maintainability of my code. It's overkill for this specific project as no new sensor of this kind will be connected, but using the right paradigm now will make it easier to implement in a real production environment later.
 
-To encapsulate the inner workings of the library, and to protect from misuse, I have choosen to use opaque pointers to the resources needed. This not only makes things cleaner, but also more difficult to break. The "drawback" is that every method has as its argument the handler of the i2c device (the sps30 sensor). If needed, this allows to have 2 sps30 connected to a single esp32, and to use the same methods for both, just changing the device handler fed to the function to change the i2c controller that is used to communicate on the bus. This is also a way to not save any data internally to the function and to make it stateless, making it easier to debug and maintain. Doing so, if something does not work, it's just the arguments or the code fault, and not the fault of an invalid state internal to the function.
+To encapsulate the inner workings of the library, and to protect from misuse, I have choosen to use opaque pointers to the resources needed. This not only makes things cleaner, but also more difficult to break. The "drawback" is that every method has as its argument the handler of the i2c device (the SPS30 sensor). If needed, this allows to have 2 SPS30 connected to a single esp32, and to use the same methods for both, just changing the device handler fed to the function to change the i2c controller that is used to communicate on the bus. This is also a way to not save any data internally to the function and to make it stateless, making it easier to debug and maintain. Doing so, if something does not work, it's just the arguments or the code fault, and not the fault of an invalid state internal to the function.
 
 ## Special note: Wake up function
 

@@ -15,8 +15,8 @@
 
   
   
-    <title>Sps30 I2C Library &middot; Andrea&#39;s blog</title>
-    <meta name="title" content="Sps30 I2C Library &middot; Andrea&#39;s blog">
+    <title>SPS30 I2C Library &middot; Andrea&#39;s blog</title>
+    <meta name="title" content="SPS30 I2C Library &middot; Andrea&#39;s blog">
   
 
   
@@ -52,7 +52,7 @@
   
   <meta property="og:url" content="http://localhost:1313/programming/sps30-i2c-library/">
   <meta property="og:site_name" content="Andrea&#39;s blog">
-  <meta property="og:title" content="Sps30 I2C Library">
+  <meta property="og:title" content="SPS30 I2C Library">
   <meta property="og:description" content="A blog about electronics and programming">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
@@ -64,7 +64,7 @@
   
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="http://localhost:1313/programming/sps30-i2c-library/featured.png">
-  <meta name="twitter:title" content="Sps30 I2C Library">
+  <meta name="twitter:title" content="SPS30 I2C Library">
   <meta name="twitter:description" content="A blog about electronics and programming">
 
   
@@ -1305,8 +1305,8 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Programmings",
-    "name": "Sps30 I2C Library",
-    "headline": "Sps30 I2C Library",
+    "name": "SPS30 I2C Library",
+    "headline": "SPS30 I2C Library",
     
     
     "inLanguage": "en",
@@ -1729,7 +1729,7 @@
     <header id="single_header" class="mt-5 max-w-prose">
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        Sps30 I2C Library
+        SPS30 I2C Library
       </h1>
       <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
         
@@ -2069,11 +2069,11 @@
     </span>
     
 </h2>
-<p>For my project I chose to use an sps30 as the particulate sensor, which is nice. But&hellip; how should I read it?</p>
+<p>For my project I chose to use a SPS30 as the particulate sensor, which is nice. But&hellip; how should I read it?</p>
 <p>Looking at the <a
   href="https://sensirion.com/media/documents/8600FF88/64A3B8D6/Sensirion_PM_Sensors_Datasheet_SPS30.pdf"
     target="_blank"
-  >datasheet</a> at page 4 it&rsquo;s possible to see the pinout, and looking at the sel pin (pin number 4) it tells us a very interesting thing: by connecting it to ground or by leaving it floating the sensor is able to communicate through UART or I2C. Since all the other sensors are communicating using I2C, to keep the wiring to a minimum I can use it for the sps30 as well.</p>
+  >datasheet</a> at page 4 it&rsquo;s possible to see the pinout, and looking at the sel pin (pin number 4) it tells us a very interesting thing: by connecting it to ground or by leaving it floating the sensor is able to communicate through UART or I2C. Since all the other sensors are communicating using I2C, to keep the wiring to a minimum I can use it for the SPS30 as well.</p>
 
 <h2 class="relative group">Hardware
     <div id="hardware" class="anchor"></div>
@@ -2126,7 +2126,7 @@
 </h2>
 <p>I just wanted to verify that the sensor is actually working as expected before spending too much time scratching my head staring at a &ldquo;it should work&rdquo; piece of code.</p>
 <p>To do so I flashed the i2ctools firmware provided by espressif to launch some commands from the CLI of my PC.
-What I quickly discovered is that the FW is able to just work with devices that use a one byte register address, while the sps30 uses two bytes for the register address.</p>
+What I quickly discovered is that the FW is able to just work with devices that use a one byte register address, while the SPS30 uses two bytes for the register address.</p>
 <p>As this device works in big-endian, setting a two bytes register address is virtually the same as setting a one byte address and then writing another byte to it. To bypass the limitations of the i2ctools firmware, I just did so.</p>
 <p>I was able to start the measurement with</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">i2c-tools&gt; i2cset -c 0x69 -r 0x00 0x10 0x05 0x00 0xF6
@@ -2169,8 +2169,8 @@ I then did what I should have done from the beginning: I connected the sensor to
     
 </h2>
 <p>The sensor was supposed to be working, yet I was not able to read data from it. At one point I realized that using i2c_master_transmit_receive() was not working, while i2c_master_write() first and i2c_master_read() later was working as expected.</p>
-<p>I&rsquo;m not entirely sure what was the problem here, especially since now, while writing this article I&rsquo;m double checking the waveforms and no obvious cause jumps out. From what I gathered there are often issues with repeated start conditions while using the new drivers for the esp32 I2C peripheral, but this is not the case since the sps30 simply does not pull down the line to give an ACK, and so the transmission just fails.</p>
-<p>Debugging this was a pain because everything looked correct but the last bit of the address select packet, the ACK signaling that the sps30 was indeed listening to the data, did not get pulled down when needed, generating a NACK instead and failing the operation.</p>
+<p>I&rsquo;m not entirely sure what was the problem here, especially since now, while writing this article I&rsquo;m double checking the waveforms and no obvious cause jumps out. From what I gathered there are often issues with repeated start conditions while using the new drivers for the esp32 I2C peripheral, but this is not the case since the SPS30 simply does not pull down the line to give an ACK, and so the transmission just fails.</p>
+<p>Debugging this was a pain because everything looked correct but the last bit of the address select packet, the ACK signaling that the SPS30 was indeed listening to the data, did not get pulled down when needed, generating a NACK instead and failing the operation.</p>
 
 
   
@@ -2286,7 +2286,7 @@ In the picture above, the following frames were sent:</p>
 </ul>
 <p>These allow to change the sensor&rsquo;s internal state, and to return the data.
 I have choosen to maintain the same style as the esp-idf examples, using opaque pointers and keeping as much as possible an object oriented paradigm, trying to encapsulate the implementation logic away, and to provide minimal interfaces to interact with the sensor. This in turn helps with scalability, reusability and maintainability of my code. It&rsquo;s overkill for this specific project as no new sensor of this kind will be connected, but using the right paradigm now will make it easier to implement in a real production environment later.</p>
-<p>To encapsulate the inner workings of the library, and to protect from misuse, I have choosen to use opaque pointers to the resources needed. This not only makes things cleaner, but also more difficult to break. The &ldquo;drawback&rdquo; is that every method has as its argument the handler of the i2c device (the sps30 sensor). If needed, this allows to have 2 sps30 connected to a single esp32, and to use the same methods for both, just changing the device handler fed to the function to change the i2c controller that is used to communicate on the bus. This is also a way to not save any data internally to the function and to make it stateless, making it easier to debug and maintain. Doing so, if something does not work, it&rsquo;s just the arguments or the code fault, and not the fault of an invalid state internal to the function.</p>
+<p>To encapsulate the inner workings of the library, and to protect from misuse, I have choosen to use opaque pointers to the resources needed. This not only makes things cleaner, but also more difficult to break. The &ldquo;drawback&rdquo; is that every method has as its argument the handler of the i2c device (the SPS30 sensor). If needed, this allows to have 2 SPS30 connected to a single esp32, and to use the same methods for both, just changing the device handler fed to the function to change the i2c controller that is used to communicate on the bus. This is also a way to not save any data internally to the function and to make it stateless, making it easier to debug and maintain. Doing so, if something does not work, it&rsquo;s just the arguments or the code fault, and not the fault of an invalid state internal to the function.</p>
 
 <h2 class="relative group">Special note: Wake up function
     <div id="special-note-wake-up-function" class="anchor"></div>
