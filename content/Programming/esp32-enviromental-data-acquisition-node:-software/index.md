@@ -1,6 +1,6 @@
 ---
 date: 2026-03-23
-draft: true
+draft: false
 title: "ESP32 Enviromental Data Acquisition Node: Software"
 ---
 
@@ -15,6 +15,7 @@ From a high level my device has to:
 * Connect to the network
 * Gather the data
 * Send the data
+* Wait for a ACK/NACK
 * Get back to sleep
 * repeat forever
 Pretty straightforward, right?
@@ -26,7 +27,7 @@ To better understand how the various states changes I started out by sketching u
 {{< mermaid >}}
     graph TD;
 
-    S0[Power On]
+    Start([Wake Up]) --> asd{Loss of power?}
     S1[Check network configuration]
     S2[Wi-Fi Provisioning]
     S3[Read sensors]
@@ -101,7 +102,82 @@ Reference: https://github.com/espressif/esp-idf/tree/v5.5.3/examples/system/deep
 RTC wake signal: ESP_ERROR_CHECK(esp_sleep_enable_timer_wakeup(wakeup_time_sec * 1000000)); configura anche un GPIO? o resetti? per mandare in sleep uso esp_deep_sleep_start();
 
 svegliarsi da un deep sleep è uguale a fare un reset, l’unica differenza la ho consultando esp_sleep_get_wakeup_cause(); e per il fatto che quello che ho messo in rtc ram prima dello sleep rimane.
-asdasd
+
+## RTC
+tempo aggiornato tramite sntp, come timer uso quelo da 8.5Mhz, piu corrente ma migliori prestazioni.
+piu info a https://docs.espressif.com/projects/esp-idf/en/v5.0.3/esp32s2/api-reference/kconfig.html#config-rtc-clk-src
+
+## MQTT
+3 stream
+* Data
+* Telemetry
+* Commands
+
+i primi due inviano i dati al server, il terzo si mette in ascolto per feedback (ok/ack o resend data)
+struttura: id/*node_id*/[Data/Telemetry/commands]
+l'idea è con le wildcard su telegraf mi smazzo tutto il traffico in ingresso al db in maniera semplice, ma andando a spulciare in fase di debug la divisione per client e dopo per data/telemetria mi semplifica il debug
+
+per smazzarmi il feedback uso il pattern producer consumer, MQTT_event_handler fa da produttore, passa i dati in una coda e esce. Creo un altro metodo che prende i dati, parsa, ritrasmette o termina, e setta un bit su cui il loop principale sta aspettando, poi esce.
+
+Uso una coda, um generico taskNotify sarebbe stato abbastanza, la coda ha un leggero overhead ma mi da flessibilità, se due messaggi arrivano uno dopo l'altro prima che l'esecuzione del primo sia terminata non ho stati indefiniti.
+
+definisco protocollo per ritrasmissione (comand da server)
+* DATA_ACK: all good, go back to sleep
+* RETRANSMIT n - N: retransmit all the data with utc time between the two times
+
+Comandi da nodo:
+* NO_DATA: dati del periodo non disponibili. Ritrasmetto pacchetto vuoto?
+* altrimenti ritrasmette pacchetti mancanti
+
+## JSON
+the data has been packaged in json format, the schema has been optimized to reduce the payload size. Initially i planned to use an array of struct, but sending multiple arrays of data reduces drammatically the size, going from:
+
+SISTEMARE! è cambiaro lo schema e uno è un array, l'altro un singolo pacchetto.
+come UUID uso gli ultimi 3 byte del MAC, che sono univochi (i primi 6 indicano il produttore della scheda, sono tutti uguali sugli esp)
+
+```json
+{
+  "device_id": "ESP32_ENV_NODE_02",
+  "data_log": [
+    {
+      "sensor_data": {
+        "time": 1718964000,
+        "PM2p5": 12.30,
+        "PM10p0": 18.70,
+        "ambient_light": 450,
+        "uvi": 3,
+        "humidity": 55,
+        "temperature": 24.50,
+        "pressure": 1013.25,
+        "payload_group": 101,
+        "errors": 0
+      },
+      "telemetry": {
+        "Vbatt": 4.12,
+        "board_temp": 28.40,
+        "rssi": 42,
+        "payload_group": 101,
+        "next_wakeup": 900
+      }
+    }
+  ]
+}
+```
+
+to
+
+```json
+{
+  "device_id": "ESP32_ENV_NODE_02",
+  "data_log": [
+    {
+      "time": 1718964000, "grp": 101, "err": 0, "next": 900, "rssi": 42,
+      "pm25": 12.30, "pm10": 18.70, "lux": 450, "uvi": 3, "hum": 55, "temp": 24.50, "press": 1013.25, 
+      "vbat": 4.12, "btemp": 28.40
+    }
+  ]
+}
+```
 
 
 

@@ -113,3 +113,7 @@ Since this was my very first KiCad project, there was a steep learning curve to 
 That ties directly into my next concern: the physical size of the board. The SPI bus lines have to travel quite a distance from the ESP32 to reach the LoRa module, the micro SD card holder, the SPI flash and the oscilloscope test points. Long traces like these increase parasitic capacitance, which can degrade signal integrity and reduce the maximum achievable bus speed. While I can easily lower the SPI clock speed in software to compensate for this, it is still a design flaw to keep track of and minimize in the future.
 
 Lastly, in the second revision, depending in how well the various external boards used in this revision will perform, they will be totally integrated on the PCB, or left out as external module for ease of assembly, as the VSON14 package is not particularly maker-friendly, even with solder paste and a reflow oven on hand.
+
+## Project download
+
+All the material is available in it's own [Github repo](https://github.com/TheBigBoschi/ESP32-Data-Acquisition-Board-PCB).
