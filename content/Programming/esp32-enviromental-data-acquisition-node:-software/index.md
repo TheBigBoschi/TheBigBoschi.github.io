@@ -1,6 +1,6 @@
 ---
 date: 2026-03-23
-draft: false
+draft: true
 title: "ESP32 Enviromental Data Acquisition Node: Software"
 ---
 
